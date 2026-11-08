@@ -4,13 +4,12 @@ Paper, supplementary material, videos and simulation code for the ISMR 2027 subm
 ISMR is the 2027 International Symposium on Medical Robotics; the paper was submitted through Papercept in November 2026.
 
 A probe presses a simulated femoral leg while a ray tracer renders the ultrasound image of the deforming tissue, live.
-The femoral vein closes under the probe while the artery holds its shape.
+The femoral vein compresses far more than the artery, the difference clinicians use to tell them apart.
 
-![Submission video, 16 s excerpt: the 3-D view and two ultrasound images on one clock](media/submission_preview.gif)
+![Submission video excerpt: the probe presses the cut-open leg; the vein collapses while the artery holds](media/submission_preview.gif)
 
-*Excerpt of the submission video ([full video, 2 min](clips/submission/submission_cutaway_smooth_colours.mp4)).
-Left: the simulated probe pressing the cut-open leg. Middle: the live ultrasound image at the paper's chosen setting.
-Right: a slower, more accurate setting, which falls behind the probe.*
+*From the submission video ([full video, 2 min](clips/submission/ismr2027_submission_video.mp4)). The probe presses the
+cut-open leg model. In the live ultrasound image the vein collapses while the artery holds its shape.*
 
 ## Videos
 
@@ -25,8 +24,8 @@ Every clip is in [`clips/`](clips/). Each subfolder's README says what is on scr
 
 | file or folder | contents |
 |---|---|
-| `main_V5.pdf` | the six-page paper as submitted |
-| `supplement.pdf` | the supplementary material: Sections S1–S3, Figs. S1–S9, Tables S1–S9 |
+| [`main.pdf`](main.pdf) | the paper: six pages plus references |
+| [`supplement.pdf`](supplement.pdf) | the supplementary material: Sections S1–S3, Figs. S1–S7, Tables S1–S9 |
 | `figures/` | every figure in the paper and supplement, as 300 dpi PNG |
 | `clips/` | the live-run videos (`.mp4`). **The submission video is in `clips/submission/`** |
 | [`i4h-phantom/`](i4h-phantom/) | **the simulation code** behind every simulated result, figure, table and video, with install and run instructions |

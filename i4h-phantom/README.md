@@ -196,21 +196,25 @@ done                                            # verify_tables.py must end with
 
 | paper | file in `figures/` or table | script |
 |---|---|---|
-| Fig. 2, Fig. S5 | `fig_meshF_wallclock_per_frame_top_panel.png`, `fig_meshF_wallclock_residual.png` | `analyze_meshF_repeats.py` |
-| Fig. 3, Table S5 | `fig_cast_validation.png` | `fig_cast_validation.py` (needs the benchtop record, section 7) |
+| Fig. 2, Table S5 | `fig_cast_validation.png` | `fig_cast_validation.py` (needs the benchtop record, section 7) |
+| Fig. 3, Fig. S6 | `fig_meshF_wallclock_per_frame_top_panel.png`, `fig_meshF_wallclock_residual.png` | `analyze_meshF_repeats.py` |
 | Fig. 4 | `fig_leg_vein_vs_artery.png` | `fig_leg_vein_vs_artery.py` |
-| Fig. 5, Fig. S4 | `fig_slab_element_size.png`, `fig_slab_timestep_collapse.png` | `fig_slab_studies.py` |
 | Fig. S3 | `fig_slab_and_sweep.png` | `fig_slab_and_sweep.py` |
-| Fig. S6 | `fig_cast_segmentation_clean_wide.png` | `fig_cast_segmentation.py` (needs the benchtop record) |
-| Tables II–III, S1–S4, S6–S8 | `tables/*.tex`, every cell with its source in `tables/values.json` | `make_tables.py`; `verify_tables.py` re-derives every cell |
+| Fig. S4, Fig. S5 | `fig_slab_element_size.png`, `fig_slab_timestep_collapse.png` | `fig_slab_studies.py` |
+| Fig. S7 | `fig_cast_segmentation_clean_wide.png` | `fig_cast_segmentation.py` (needs the benchtop record) |
+| Tables I, III, S1–S4, S6–S8 | `tables/*.tex`, every cell with its source in `tables/values.json` | `make_tables.py`; `verify_tables.py` re-derives every cell |
 | abstract and conclusion numbers | `data/headline_numbers.json` | `headline_numbers.py` |
+| Section S2: wall clock per solver pass, inverted elements | `data/slab_inversion/`, `data/leg_inversion/`, `data/slab_cost/per_pass.csv` | `audit_slab_inversion.py`, `audit_leg_inversion.py`, `fig_slab_studies.py` |
+
+The `data/` files the supplement cites are not distributed. The scripts above regenerate them from the runs.
 
 ## 7. What is not included
 
-- **The benchtop record.** The cast phantom's B-mode frames and lumen measurements are not distributed.
-  Fig. 3, Fig. S6 and Table S5 need them (`BENCHTOP_DIR`). Table S5 prints every measured value.
-- **Fig. 1, Fig. S1, Fig. S2.** Fig. 1 is a photo composite and Fig. S2 a drawing, both made by hand.
-  Fig. S1 is a TikZ diagram; the paper's LaTeX sources are not distributed.
+- **The benchtop record.** The cast phantom's B-mode frames, the operator's picks and the lumen measurements are not
+  distributed. Fig. 2, Fig. S7 and Table S5 need them (`BENCHTOP_DIR`). Table S5 prints every measured value.
+  The measurement code is included: `analysis/measure_lumen.py` finds the wall echoes on a column profile.
+- **Fig. 1, Fig. S1, Fig. S2, Table II.** Fig. 1 is a photo composite and Fig. S2 a drawing, both made by hand.
+  Fig. S1 is a TikZ diagram and Table II was written by hand; the paper's LaTeX sources are not distributed.
 - **The CAD-to-V5 derivation.** `anatomy_meshing/v4_to_section.py` and `v5_from_v4.py` are included for the record.
   They need the V4 SolidWorks export, which is not distributed. The V5 anatomy they produced is (`out/femoral_v5/`).
 - **Raw run outputs.** About 5 GB. Everything in sections 5 and 6 regenerates them.

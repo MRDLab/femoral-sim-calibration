@@ -15,7 +15,7 @@ __pycache__/
 *.synctex.gz
 *.toc
 /*.pdf
-!/main_V5.pdf
+!/main.pdf
 !/supplement.pdf
 /*.zip
 
