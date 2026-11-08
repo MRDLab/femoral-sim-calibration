@@ -132,7 +132,7 @@ with plt.rc_context(PS.RC):
     h_ = [plt.Line2D([], [], color="0.25", lw=1.6),
           plt.Line2D([], [], ls="--", lw=1.2, color="0.25", marker="o", mfc=C_CAST, mec="0.25", mew=1.2, ms=5),
           matplotlib.patches.Patch(color="0.25", alpha=0.15, lw=0)]
-    fig.legend(h_, ["simulated (blind)", "benchtop, mean ± SD", "±5 points"], loc="outside upper center",
+    fig.legend(h_, ["simulated", "benchtop, mean ± SD", "±5 points"], loc="outside upper center",
                ncols=2, frameon=False, handlelength=1.3, handletextpad=0.3, columnspacing=0.8)
     ax.set_xlim(-0.8, 30.5); ax.set_ylim(40, 103)
     ax.xaxis.set_major_locator(MultipleLocator(5)); ax.xaxis.set_minor_locator(MultipleLocator(1))
