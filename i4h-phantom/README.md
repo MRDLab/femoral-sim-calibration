@@ -210,9 +210,11 @@ The `data/` files the supplement cites are not distributed. The scripts above re
 
 ## 7. What is not included
 
-- **The benchtop record.** The cast phantom's B-mode frames, the operator's picks and the lumen measurements are not
-  distributed. Fig. 2, Fig. S7 and Table S5 need them (`BENCHTOP_DIR`). Table S5 prints every measured value.
-  The measurement code is included: `analysis/measure_lumen.py` finds the wall echoes on a column profile.
+- **The benchtop record.** The cast phantom's B-mode frames and lumen measurements are not distributed.
+  Fig. 2, Fig. S7 and Table S5 need them (`BENCHTOP_DIR`). Table S5 prints every measured value.
+  The measurement code and the operator's picks are included: `analysis/measure_lumen.py` finds the wall echoes on a
+  column profile, and `analysis/benchtop_picks.csv` holds the inner-wall pair the operator chose in each frame
+  (54 picks: 9 presses × 3 trials × 2 vessels, in image pixels at 22.24 px/mm).
 - **Fig. 1, Fig. S1, Fig. S2, Table II.** Fig. 1 is a photo composite and Fig. S2 a drawing, both made by hand.
   Fig. S1 is a TikZ diagram and Table II was written by hand; the paper's LaTeX sources are not distributed.
 - **The CAD-to-V5 derivation.** `anatomy_meshing/v4_to_section.py` and `v5_from_v4.py` are included for the record.
