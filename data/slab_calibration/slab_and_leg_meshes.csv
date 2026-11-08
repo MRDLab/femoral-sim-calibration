@@ -1,0 +1,3 @@
+mesh,file,sha256_12,nodes,tetrahedra,pinned_nodes,element_size_mm,x_extent_mm,y_extent_along_limb_mm,z_extent_mm
+slab,tetmesh_v5_s020_dx1p5.npz,3ab9d1302397,31740,166386,1896,1.5 uniform,72.0,16.5,82.5
+leg,tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz,d14afb0ae307,23688,129783,352,"graded: 1.5 in the access window, 30 elsewhere",184.92,81.0,184.92

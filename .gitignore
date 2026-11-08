@@ -1,0 +1,58 @@
+__pycache__/
+*.pyc
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+# the uploaded working package and other archives: kept locally in archive/, not versioned
+archive/*.zip
+# raw frame caches
+appendix/**/raw_frames/
+
+# ---- Kept on disk, not shown to reviewers (2026-11-04 cleanup) ----
+# superseded V4 paper and results (kept locally by direction, 2026-10-23)
+V4_results/
+# earlier drafts, review comments, change orders
+paper/archive/
+# internal working notes and checks
+CITATION_CHECK_BRIEF.md
+MISSING_REFERENCES_HANDOFF.md
+LITERATURE_MODULI.md
+FIGURES.md
+scripts/plagiarism_check.py
+data/plagiarism/
+# videos live in clips/; the appendix copies were byte-identical duplicates
+appendix/**/*.mp4
+# figures: track only what main_V5.tex and supplement.tex include (+ PNG previews)
+figures/*
+!figures/fig_cast_segmentation_clean_wide.*
+!figures/fig_cast_validation.*
+!figures/fig_causal_chain.*
+!figures/fig_leg_settings_gap.*
+!figures/fig_leg_vein_vs_artery.*
+!figures/fig_meshF_wallclock_per_frame_top_panel.*
+!figures/fig_meshF_wallclock_residual.*
+!figures/fig_pipeline_press_19mm_clean.*
+!figures/fig_sim_vs_real_clean.*
+!figures/fig_slab_and_sweep.*
+!figures/fig_slab_element_size.*
+!figures/fig_slab_timestep_collapse.*
+!figures/fig_vbd_schematic.*
+
+# figures are included as 300 dpi PNGs (2026-11-04, by direction); the scripts still write PDFs, which stay untracked
+figures/*.pdf
+# packaged Overleaf uploads, built by scripts/make_overleaf_zip.sh
+/*.zip
+
+# paper sources and PDFs live in Overleaf, not in the public repository (2026-11-05, by direction)
+/main_V5.tex
+/supplement.tex
+/*.pdf
+# analysis and figure scripts: they read the private simulation repository, so they stay local (2026-11-05, by direction)
+/scripts/

@@ -1,0 +1,5 @@
+mesh,depth_mm,vein_pct_of_rest,artery_pct_of_rest,source,mesh_sha256_12,frac_3mm_blocks_with_signal,first_data_mm_below_probe
+slab,3.0,93.18,98.99,press_s8_i35.json,6f3c9f86ab61,0.846,0.0
+slab,25.4,30.97,83.01,press_s8_i35.json,6f3c9f86ab61,0.615,0.32
+leg (Mesh F),3.0,95.55,102.09,legF_s2_i35 frame 193,c4e13e7d7574,0.851,0.0
+leg (Mesh F),25.4,24.68,70.7,legF_s2_i35 frame 510,c4e13e7d7574,0.659,0.0

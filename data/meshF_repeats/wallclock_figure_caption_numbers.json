@@ -1,0 +1,11 @@
+{
+ "n_tets": 129783,
+ "trend_ms_per_pass": 0.401,
+ "trend_ms_per_frame": 2.82,
+ "repeat_spread_pct": [
+  0.4,
+  2.3
+ ],
+ "figure_width_in": 3.5,
+ "min_font_pt": 9.0
+}

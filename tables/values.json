@@ -1,0 +1,4459 @@
+{
+ "leg.floor_pct": {
+  "value": [
+   14.0,
+   19.6
+  ],
+  "source": "tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz: 0.8 dx x cut width 8.9-12.5 mm / rest area"
+ },
+ "geo.slab.w": {
+  "value": 72.0,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.w": {
+  "value": 184.9,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "geo.slab.l": {
+  "value": 16.5,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.l": {
+  "value": 81.0,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "geo.slab.d": {
+  "value": 82.5,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.d": {
+  "value": 184.9,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "geo.slab.nodes": {
+  "value": 31740,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.nodes": {
+  "value": 23688,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "geo.slab.tets": {
+  "value": 166386,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.tets": {
+  "value": 129783,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "geo.slab.pinned": {
+  "value": 1896,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "geo.leg.pinned": {
+  "value": 352,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "num.slab.dt_us": {
+  "value": 18.6,
+  "source": "dx1p5_s896_i140.json"
+ },
+ "num.leg.dt_ms": {
+  "value": 8.33,
+  "source": "legV5_s2_i35.json"
+ },
+ "num.slab.iter": {
+  "value": 140,
+  "source": "dx1p5_s896_i140.json"
+ },
+ "num.leg.iter": {
+  "value": 35,
+  "source": "legV5_s2_i35.json"
+ },
+ "num.slab.ke": {
+  "value": 2000.0,
+  "source": "dx1p5_s896_i140.json"
+ },
+ "num.leg.ke": {
+  "value": 2000.0,
+  "source": "legV5_s2_i35.json"
+ },
+ "num.slab.gamma": {
+  "value": 1.0,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "num.leg.gamma": {
+  "value": 1.0,
+  "source": "simulation output: mesh_leg_v5/tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz"
+ },
+ "phantom.Length along the limb": {
+  "value": "81~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Diameter": {
+  "value": "184.9~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Skin and fat thickness": {
+  "value": "16.0~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Artery lumen diameter": {
+  "value": "6.96~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Vein lumen diameter": {
+  "value": "9.95~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Artery wall thickness": {
+  "value": "1.00~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Vein wall thickness": {
+  "value": "0.50~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Skin to artery inner wall": {
+  "value": "19.5~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Skin to vein inner wall": {
+  "value": "17.8~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Artery to vein, center to center": {
+  "value": "10.0~mm",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Tissue model": {
+  "value": "Neo-Hookean; moduli in Table~\\ref{tab:anatomy}",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Soft-tissue material": {
+  "value": "--",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Young's modulus, muscle / fat": {
+  "value": "--",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.Vessel walls": {
+  "value": "--",
+  "source": "section_s020.json, SoftTissue.obj (V5)"
+ },
+ "phantom.cast.Length along the limb": {
+  "value": "81~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Diameter": {
+  "value": "184.1~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Skin and fat thickness": {
+  "value": "15.9~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Artery lumen diameter": {
+  "value": "9.00~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Vein lumen diameter": {
+  "value": "10.00~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Artery wall thickness": {
+  "value": "1.00~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Vein wall thickness": {
+  "value": "1.50~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Skin to artery inner wall": {
+  "value": "22.6~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Skin to vein inner wall": {
+  "value": "20.8~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Artery to vein, center to center": {
+  "value": "16.0~mm",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Tissue model": {
+  "value": "Neo-Hookean; values below",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Soft-tissue material": {
+  "value": "SimuGel blends (muscle \\#0+\\#1, fat \\#2+\\#0)",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Young's modulus, muscle / fat": {
+  "value": "510 / 380~kPa (supplier, mixed by mass)",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "phantom.cast.Vessel walls": {
+  "value": "silicone tubes, 70A artery / 35A vein",
+  "source": "section_s020.json (cast section); materials.py Phantom* entries"
+ },
+ "cast.3.vein": {
+  "value": [
+   97.0998,
+   93.6294,
+   96.6401
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.3.artery": {
+  "value": [
+   95.6828,
+   90.1753,
+   94.1758
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.7.vein": {
+  "value": [
+   89.3789,
+   89.9384,
+   91.0
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.7.artery": {
+  "value": [
+   87.2789,
+   86.2359,
+   87.9591
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.11.vein": {
+  "value": [
+   84.048,
+   83.7026,
+   84.3975
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.11.artery": {
+  "value": [
+   78.1911,
+   75.881,
+   79.5093
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.15.vein": {
+  "value": [
+   78.0508,
+   78.8584,
+   78.4518
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.15.artery": {
+  "value": [
+   67.7502,
+   71.4607,
+   73.9673
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.19.vein": {
+  "value": [
+   70.1556,
+   73.3744,
+   68.2355
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.19.artery": {
+  "value": [
+   63.236,
+   68.8388,
+   69.3699
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.23.vein": {
+  "value": [
+   64.7402,
+   69.2086,
+   61.0499
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.23.artery": {
+  "value": [
+   59.0542,
+   61.4773,
+   55.9252
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.25.4.vein": {
+  "value": [
+   51.3494,
+   52.5417,
+   53.1323
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "cast.25.4.artery": {
+  "value": [
+   47.9358,
+   47.9358,
+   45.1248
+  ],
+  "source": "data/cast_trials.csv (from Phantoms/.../trials_2026-10-30/phantom_lumen_measurements_clean.csv)"
+ },
+ "mesh.2p5.v15": {
+  "value": [
+   65.78,
+   65.45,
+   65.57
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2p5_s896_i140.json']"
+ },
+ "mesh.2p5.v25": {
+  "value": [
+   58.79,
+   56.36,
+   58.15
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2p5_s896_i140.json']"
+ },
+ "mesh.2p5.floor": {
+  "value": 35.6,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx2p5.npz"
+ },
+ "mesh.2p5.ninv": {
+  "value": [
+   135,
+   112,
+   111
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2p5_s896_i140.json']"
+ },
+ "mesh.2p5.minJ": {
+  "value": [
+   -1.92,
+   -1.72,
+   -2.79
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2p5_s896_i140.json']"
+ },
+ "mesh.2p5.wall_min": {
+  "value": [
+   493.3,
+   489.5,
+   467.1
+  ],
+  "source": "queue.log"
+ },
+ "mesh.2p5.head": {
+  "value": [
+   23.19,
+   20.76,
+   22.55
+  ],
+  "source": "vein at 25.4 mm minus the floor, per run"
+ },
+ "mesh.2.v15": {
+  "value": [
+   61.11,
+   60.87,
+   60.75
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2_s896_i140.json']"
+ },
+ "mesh.2.v25": {
+  "value": [
+   34.15,
+   33.64,
+   33.55
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2_s896_i140.json']"
+ },
+ "mesh.2.floor": {
+  "value": 29.7,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx2.npz"
+ },
+ "mesh.2.ninv": {
+  "value": [
+   156,
+   142,
+   157
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2_s896_i140.json']"
+ },
+ "mesh.2.minJ": {
+  "value": [
+   -2.84,
+   -0.36,
+   -1.71
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx2_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx2_s896_i140.json']"
+ },
+ "mesh.2.wall_min": {
+  "value": [
+   546.2,
+   541.9,
+   559.5
+  ],
+  "source": "queue.log"
+ },
+ "mesh.2.head": {
+  "value": [
+   4.43,
+   3.93,
+   3.84
+  ],
+  "source": "vein at 25.4 mm minus the floor, per run"
+ },
+ "mesh.1p5.v15": {
+  "value": [
+   61.1,
+   61.19,
+   61.34
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "mesh.1p5.v25": {
+  "value": [
+   33.87,
+   33.99,
+   33.48
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "mesh.1p5.floor": {
+  "value": 22.6,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p5.npz"
+ },
+ "mesh.1p5.ninv": {
+  "value": [
+   302,
+   323,
+   287
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "mesh.1p5.minJ": {
+  "value": [
+   -0.43,
+   -1.59,
+   -1.67
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "mesh.1p5.wall_min": {
+  "value": [
+   613.1,
+   551.9,
+   581.7
+  ],
+  "source": "queue.log"
+ },
+ "mesh.1p5.head": {
+  "value": [
+   11.27,
+   11.39,
+   10.88
+  ],
+  "source": "vein at 25.4 mm minus the floor, per run"
+ },
+ "mesh.1p25.v15": {
+  "value": [
+   56.34,
+   56.42,
+   56.4
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p25_s896_i140.json']"
+ },
+ "mesh.1p25.v25": {
+  "value": [
+   26.09,
+   25.94,
+   25.96
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p25_s896_i140.json']"
+ },
+ "mesh.1p25.floor": {
+  "value": 19.3,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p25.npz"
+ },
+ "mesh.1p25.ninv": {
+  "value": [
+   435,
+   427,
+   407
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p25_s896_i140.json']"
+ },
+ "mesh.1p25.minJ": {
+  "value": [
+   -2.75,
+   -0.9,
+   -0.67
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p25_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p25_s896_i140.json']"
+ },
+ "mesh.1p25.wall_min": {
+  "value": [
+   478.0,
+   492.7,
+   488.5
+  ],
+  "source": "queue.log"
+ },
+ "mesh.1p25.head": {
+  "value": [
+   6.77,
+   6.63,
+   6.64
+  ],
+  "source": "vein at 25.4 mm minus the floor, per run"
+ },
+ "mesh.1p0.v15": {
+  "value": [
+   50.74,
+   50.77,
+   50.87
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p0_s896_i140.json']"
+ },
+ "mesh.1p0.v25": {
+  "value": [
+   19.49,
+   19.42,
+   19.49
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p0_s896_i140.json']"
+ },
+ "mesh.1p0.floor": {
+  "value": 15.8,
+  "source": "simulation output: mesh_study_v5/tetmesh_v5_s020_dx1p0.npz"
+ },
+ "mesh.1p0.ninv": {
+  "value": [
+   514,
+   482,
+   504
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p0_s896_i140.json']"
+ },
+ "mesh.1p0.minJ": {
+  "value": [
+   -1.47,
+   -2.08,
+   -1.48
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p0_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p0_s896_i140.json']"
+ },
+ "mesh.1p0.wall_min": {
+  "value": [
+   594.0,
+   588.7,
+   589.0
+  ],
+  "source": "queue.log"
+ },
+ "mesh.1p0.head": {
+  "value": [
+   3.7,
+   3.63,
+   3.71
+  ],
+  "source": "vein at 25.4 mm minus the floor, per run"
+ },
+ "ts.T_us": {
+  "value": 258.1,
+  "source": "record's definition, rho 1000, dx 1.5 mm, ke from a V5 slab run"
+ },
+ "ts.896.ratio": {
+  "value": 0.07,
+  "source": "time step / T"
+ },
+ "ts.896.gap": {
+  "value": [
+   1.06,
+   1.08,
+   0.3
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "ts.896.most": {
+  "value": [
+   168,
+   84,
+   129
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r2/dx1p5_s896_i140.json', 'simulation output: paper_v5/slab/r3/dx1p5_s896_i140.json']"
+ },
+ "ts.896.wall_min": {
+  "value": [
+   613.1,
+   551.9,
+   581.7
+  ],
+  "source": "queue.log"
+ },
+ "ts.168.ratio": {
+  "value": 0.38,
+  "source": "time step / T"
+ },
+ "ts.168.gap": {
+  "value": [
+   2.33,
+   2.34,
+   2.11
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s168_i140.json', 'simulation output: paper_v5/slab/r2/ts_s168_i140.json', 'simulation output: paper_v5/slab/r3/ts_s168_i140.json']"
+ },
+ "ts.168.most": {
+  "value": [
+   179,
+   174,
+   179
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s168_i140.json', 'simulation output: paper_v5/slab/r2/ts_s168_i140.json', 'simulation output: paper_v5/slab/r3/ts_s168_i140.json']"
+ },
+ "ts.168.wall_min": {
+  "value": [
+   117.6,
+   115.6,
+   117.6
+  ],
+  "source": "queue.log"
+ },
+ "ts.67.ratio": {
+  "value": 0.96,
+  "source": "time step / T"
+ },
+ "ts.67.gap": {
+  "value": [
+   2.29,
+   2.81,
+   2.7
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s67_i140.json', 'simulation output: paper_v5/slab/r2/ts_s67_i140.json', 'simulation output: paper_v5/slab/r3/ts_s67_i140.json']"
+ },
+ "ts.67.most": {
+  "value": [
+   179,
+   164,
+   234
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s67_i140.json', 'simulation output: paper_v5/slab/r2/ts_s67_i140.json', 'simulation output: paper_v5/slab/r3/ts_s67_i140.json']"
+ },
+ "ts.67.wall_min": {
+  "value": [
+   144.3,
+   127.1,
+   140.6
+  ],
+  "source": "queue.log"
+ },
+ "ts.17.ratio": {
+  "value": 3.8,
+  "source": "time step / T"
+ },
+ "ts.17.gap": {
+  "value": [
+   5.64,
+   5.77,
+   5.75
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s17_i140.json', 'simulation output: paper_v5/slab/r2/ts_s17_i140.json', 'simulation output: paper_v5/slab/r3/ts_s17_i140.json']"
+ },
+ "ts.17.most": {
+  "value": [
+   158,
+   170,
+   174
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s17_i140.json', 'simulation output: paper_v5/slab/r2/ts_s17_i140.json', 'simulation output: paper_v5/slab/r3/ts_s17_i140.json']"
+ },
+ "ts.17.wall_min": {
+  "value": [
+   31.9,
+   30.9,
+   31.9
+  ],
+  "source": "queue.log"
+ },
+ "ts.8.ratio": {
+  "value": 8.07,
+  "source": "time step / T"
+ },
+ "ts.8.gap": {
+  "value": [
+   1.51,
+   1.53,
+   1.46
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i140.json', 'simulation output: paper_v5/slab/r2/ts_s8_i140.json', 'simulation output: paper_v5/slab/r3/ts_s8_i140.json']"
+ },
+ "ts.8.most": {
+  "value": [
+   139,
+   139,
+   143
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i140.json', 'simulation output: paper_v5/slab/r2/ts_s8_i140.json', 'simulation output: paper_v5/slab/r3/ts_s8_i140.json']"
+ },
+ "ts.8.wall_min": {
+  "value": [
+   6.3,
+   6.5,
+   6.5
+  ],
+  "source": "queue.log"
+ },
+ "ts.3.ratio": {
+  "value": 21.52,
+  "source": "time step / T"
+ },
+ "ts.3.gap": {
+  "value": [
+   5.04,
+   4.26,
+   4.71
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s3_i140.json', 'simulation output: paper_v5/slab/r2/ts_s3_i140.json', 'simulation output: paper_v5/slab/r3/ts_s3_i140.json']"
+ },
+ "ts.3.most": {
+  "value": [
+   247,
+   247,
+   247
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s3_i140.json', 'simulation output: paper_v5/slab/r2/ts_s3_i140.json', 'simulation output: paper_v5/slab/r3/ts_s3_i140.json']"
+ },
+ "ts.3.wall_min": {
+  "value": [
+   4.5,
+   4.7,
+   4.7
+  ],
+  "source": "queue.log"
+ },
+ "ts.2.ratio": {
+  "value": 32.29,
+  "source": "time step / T"
+ },
+ "ts.2.gap": {
+  "value": [
+   1.89,
+   1.88,
+   1.91
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s2_i140.json', 'simulation output: paper_v5/slab/r2/ts_s2_i140.json', 'simulation output: paper_v5/slab/r3/ts_s2_i140.json']"
+ },
+ "ts.2.most": {
+  "value": [
+   138,
+   140,
+   133
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s2_i140.json', 'simulation output: paper_v5/slab/r2/ts_s2_i140.json', 'simulation output: paper_v5/slab/r3/ts_s2_i140.json']"
+ },
+ "ts.2.wall_min": {
+  "value": [
+   2.3,
+   2.5,
+   2.5
+  ],
+  "source": "queue.log"
+ },
+ "it.70.gap": {
+  "value": [
+   0.247,
+   0.299,
+   0.169
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i70.json', 'simulation output: paper_v5/slab/r2/ts_s8_i70.json', 'simulation output: paper_v5/slab/r3/ts_s8_i70.json']"
+ },
+ "it.35.gap": {
+  "value": [
+   0.448,
+   0.357,
+   0.357
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i35.json', 'simulation output: paper_v5/slab/r2/ts_s8_i35.json', 'simulation output: paper_v5/slab/r3/ts_s8_i35.json']"
+ },
+ "it.20.gap": {
+  "value": [
+   1.324,
+   2.05,
+   1.177
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i20.json', 'simulation output: paper_v5/slab/r2/ts_s8_i20.json', 'simulation output: paper_v5/slab/r3/ts_s8_i20.json']"
+ },
+ "it.10.gap": {
+  "value": [
+   2.338,
+   2.535,
+   2.857
+  ],
+  "source": "['simulation output: paper_v5/slab/r1/ts_s8_i10.json', 'simulation output: paper_v5/slab/r2/ts_s8_i10.json', 'simulation output: paper_v5/slab/r3/ts_s8_i10.json']"
+ },
+ "cost.a": {
+  "value": 0.4003,
+  "source": "data/meshF_repeats/cost_model.csv"
+ },
+ "cost.b": {
+  "value": 0.1994,
+  "source": "data/meshF_repeats/cost_model.csv"
+ },
+ "cost.c": {
+  "value": 2.0386,
+  "source": "data/meshF_repeats/cost_model.csv"
+ },
+ "cost.trend_a": {
+  "value": 0.4015,
+  "source": "data/meshF_repeats/cost_model.csv"
+ },
+ "cost.trend_c": {
+  "value": 2.8208,
+  "source": "data/meshF_repeats/cost_model.csv"
+ },
+ "graph.2x35.on": {
+  "value": [
+   30.45,
+   30.18,
+   30.43,
+   30.45,
+   30.4
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.2x35.off": {
+  "value": [
+   89.99,
+   89.74,
+   90.43,
+   90.87,
+   90.83
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.2x35.gain": {
+  "value": [
+   2.9683,
+   2.9946,
+   2.9703,
+   2.968,
+   2.9725
+  ],
+  "source": "graph off mean / each graph-on run"
+ },
+ "graph.8x35.on": {
+  "value": [
+   119.78,
+   118.21,
+   117.66,
+   116.76,
+   115.12
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.8x35.off": {
+  "value": [
+   356.53,
+   356.24,
+   361.8,
+   358.91,
+   359.37
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.8x35.gain": {
+  "value": [
+   2.9937,
+   3.0334,
+   3.0477,
+   3.0711,
+   3.1147
+  ],
+  "source": "graph off mean / each graph-on run"
+ },
+ "graph.168x140.on": {
+  "value": [
+   9037.2,
+   9590.49,
+   9297.32,
+   9401.96,
+   9181.51
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.168x140.off": {
+  "value": [
+   29631.22,
+   29851.67,
+   29697.45,
+   29517.26,
+   29811.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "graph.168x140.gain": {
+  "value": [
+   3.2866,
+   3.097,
+   3.1947,
+   3.1591,
+   3.235
+  ],
+  "source": "graph off mean / each graph-on run"
+ },
+ "spd.legV5_s168_i140_ref.ms": {
+  "value": [
+   9037.198,
+   9590.487,
+   9297.319,
+   9401.958,
+   9181.514
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s168_i140_ref.speedupf": {
+  "value": [
+   1.0293,
+   0.9699,
+   1.0005,
+   0.9893,
+   1.0131
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s168_i140_ref.speedup": {
+  "value": [
+   1.0591,
+   0.8778,
+   1.0004,
+   1.0408,
+   1.0458
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s168_i140_ref.gapv": {
+  "value": [
+   0.4455,
+   0.3475,
+   0.1453,
+   0.0995,
+   0.1052
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s168_i140_ref.gapa": {
+  "value": [
+   0.1289,
+   0.1991,
+   0.0868,
+   0.1703,
+   0.0544
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s67_i140.ms": {
+  "value": [
+   3789.498,
+   3816.51,
+   3807.159,
+   3784.233,
+   3791.112
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s67_i140.speedupf": {
+  "value": [
+   2.4546,
+   2.4372,
+   2.4432,
+   2.458,
+   2.4536
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s67_i140.speedup": {
+  "value": [
+   2.4132,
+   2.4202,
+   2.5393,
+   2.4548,
+   2.4885
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s67_i140.gapv": {
+  "value": [
+   0.4796,
+   0.323,
+   0.2284,
+   0.3271,
+   0.2873
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s67_i140.gapa": {
+  "value": [
+   0.3702,
+   0.4588,
+   0.2791,
+   0.2589,
+   0.3493
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s17_i140.ms": {
+  "value": [
+   953.24,
+   962.842,
+   953.932,
+   944.497,
+   952.982
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s17_i140.speedupf": {
+  "value": [
+   9.758,
+   9.6607,
+   9.7509,
+   9.8483,
+   9.7606
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s17_i140.speedup": {
+  "value": [
+   9.7564,
+   9.3877,
+   9.4532,
+   9.9811,
+   9.3911
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s17_i140.gapv": {
+  "value": [
+   0.1707,
+   0.2602,
+   0.2744,
+   0.1286,
+   0.1292
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s17_i140.gapa": {
+  "value": [
+   0.2444,
+   0.3592,
+   0.2151,
+   0.2151,
+   0.2151
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i140.ms": {
+  "value": [
+   453.813,
+   454.28,
+   448.874,
+   456.316,
+   453.634
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i140.speedupf": {
+  "value": [
+   20.4968,
+   20.4757,
+   20.7223,
+   20.3843,
+   20.5048
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i140.speedup": {
+  "value": [
+   19.7619,
+   17.685,
+   19.1418,
+   20.2118,
+   18.8193
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i140.gapv": {
+  "value": [
+   0.1623,
+   0.4687,
+   0.1369,
+   0.2042,
+   0.2418
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i140.gapa": {
+  "value": [
+   0.2497,
+   0.676,
+   0.2497,
+   0.3025,
+   0.2497
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i140.ms": {
+  "value": [
+   169.065,
+   171.824,
+   171.164,
+   173.181,
+   174.079
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i140.speedupf": {
+  "value": [
+   55.0185,
+   54.135,
+   54.3438,
+   53.7108,
+   53.4338
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i140.speedup": {
+  "value": [
+   49.275,
+   45.6068,
+   49.9597,
+   43.8948,
+   43.9052
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i140.gapv": {
+  "value": [
+   0.7474,
+   0.6546,
+   1.6329,
+   0.6807,
+   0.7142
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i140.gapa": {
+  "value": [
+   0.8494,
+   0.8494,
+   0.8494,
+   0.8494,
+   0.8494
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i140.ms": {
+  "value": [
+   113.872,
+   115.252,
+   114.027,
+   116.407,
+   114.354
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i140.speedupf": {
+  "value": [
+   81.6855,
+   80.7075,
+   81.5745,
+   79.9067,
+   81.3412
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i140.speedup": {
+  "value": [
+   68.7598,
+   62.6993,
+   66.354,
+   58.0506,
+   72.0851
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i140.gapv": {
+  "value": [
+   0.5526,
+   0.5952,
+   0.626,
+   0.6107,
+   0.5341
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i140.gapa": {
+  "value": [
+   1.0285,
+   0.9883,
+   0.9414,
+   0.9073,
+   0.9229
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i70.ms": {
+  "value": [
+   224.272,
+   223.715,
+   228.653,
+   224.563,
+   225.665
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i70.speedupf": {
+  "value": [
+   41.4751,
+   41.5783,
+   40.6804,
+   41.4213,
+   41.219
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i70.speedup": {
+  "value": [
+   35.3873,
+   36.4203,
+   36.374,
+   37.1501,
+   36.6867
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i70.gapv": {
+  "value": [
+   0.5124,
+   0.4713,
+   0.353,
+   0.3066,
+   0.414
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i70.gapa": {
+  "value": [
+   0.3479,
+   0.3367,
+   0.3042,
+   0.2632,
+   0.2745
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i35.ms": {
+  "value": [
+   120.808,
+   116.117,
+   114.179,
+   117.182,
+   119.713
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i35.speedupf": {
+  "value": [
+   76.9957,
+   80.1062,
+   81.4659,
+   79.3782,
+   77.7
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i35.speedup": {
+  "value": [
+   55.949,
+   71.7233,
+   71.1674,
+   62.1387,
+   63.5309
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i35.gapv": {
+  "value": [
+   1.6089,
+   0.9539,
+   2.2697,
+   0.6142,
+   0.5464
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i35.gapa": {
+  "value": [
+   0.7803,
+   0.7789,
+   0.7803,
+   0.7789,
+   0.7789
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i20.ms": {
+  "value": [
+   69.23,
+   68.637,
+   67.916,
+   67.49,
+   68.192
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i20.speedupf": {
+  "value": [
+   134.3593,
+   135.5201,
+   136.9588,
+   137.8233,
+   136.4045
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i20.speedup": {
+  "value": [
+   90.9958,
+   93.3796,
+   91.7057,
+   94.2505,
+   94.7895
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i20.gapv": {
+  "value": [
+   1.159,
+   0.8034,
+   0.8952,
+   0.7113,
+   0.7877
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i20.gapa": {
+  "value": [
+   0.8809,
+   0.905,
+   0.9729,
+   0.9165,
+   0.7562
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i10.ms": {
+  "value": [
+   35.697,
+   35.66,
+   35.095,
+   35.302,
+   35.43
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i10.speedupf": {
+  "value": [
+   260.5736,
+   260.8439,
+   265.0433,
+   263.4892,
+   262.5373
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i10.speedup": {
+  "value": [
+   166.106,
+   162.8581,
+   180.7413,
+   162.9141,
+   174.7208
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i10.gapv": {
+  "value": [
+   1.4517,
+   1.5392,
+   0.3839,
+   1.308,
+   0.7925
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s8_i10.gapa": {
+  "value": [
+   1.0937,
+   1.0221,
+   1.0476,
+   1.4814,
+   0.8765
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i35.ms": {
+  "value": [
+   44.48,
+   44.572,
+   44.254,
+   44.816,
+   45.031
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i35.speedupf": {
+  "value": [
+   209.1208,
+   208.6892,
+   210.1888,
+   207.553,
+   206.562
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i35.speedup": {
+  "value": [
+   156.0356,
+   154.7175,
+   150.1348,
+   151.6111,
+   145.9892
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i35.gapv": {
+  "value": [
+   0.7106,
+   0.8145,
+   0.9637,
+   0.9057,
+   0.8464
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s3_i35.gapa": {
+  "value": [
+   0.9616,
+   1.1701,
+   0.9616,
+   0.9616,
+   1.1926
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i35.ms": {
+  "value": [
+   30.204,
+   30.426,
+   30.504,
+   30.251,
+   30.589
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i35.speedupf": {
+  "value": [
+   307.9624,
+   305.7153,
+   304.9336,
+   307.4839,
+   304.0863
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i35.speedup": {
+  "value": [
+   204.704,
+   205.5162,
+   200.6766,
+   204.5398,
+   199.7817
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i35.gapv": {
+  "value": [
+   0.6832,
+   0.6617,
+   0.8175,
+   0.7561,
+   0.8854
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "spd.legV5_s2_i35.gapa": {
+  "value": [
+   1.0311,
+   1.0311,
+   1.0311,
+   1.0302,
+   1.0311
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.3.vein": {
+  "value": [
+   96.5,
+   96.5,
+   96.5,
+   96.5,
+   96.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.3.artery": {
+  "value": [
+   100.64,
+   100.64,
+   100.64,
+   100.64,
+   100.64
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.7.vein": {
+  "value": [
+   87.84,
+   87.84,
+   87.84,
+   87.84,
+   87.84
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.7.artery": {
+  "value": [
+   100.91,
+   100.91,
+   100.91,
+   100.91,
+   100.91
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.11.vein": {
+  "value": [
+   75.37,
+   75.37,
+   75.37,
+   75.37,
+   75.37
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.11.artery": {
+  "value": [
+   99.74,
+   99.74,
+   99.74,
+   99.74,
+   99.74
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.15.vein": {
+  "value": [
+   62.14,
+   62.15,
+   62.09,
+   62.15,
+   62.18
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.15.artery": {
+  "value": [
+   92.88,
+   92.91,
+   92.89,
+   92.92,
+   92.94
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.19.vein": {
+  "value": [
+   48.1,
+   48.0,
+   48.16,
+   47.91,
+   48.01
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.19.artery": {
+  "value": [
+   94.12,
+   94.13,
+   94.1,
+   94.14,
+   94.16
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.23.vein": {
+  "value": [
+   34.01,
+   33.78,
+   34.05,
+   33.8,
+   33.42
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.23.artery": {
+  "value": [
+   90.02,
+   89.96,
+   90.02,
+   89.98,
+   90.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.25.4.vein": {
+  "value": [
+   27.76,
+   27.75,
+   27.6,
+   27.66,
+   27.65
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "vc.25.4.artery": {
+  "value": [
+   83.91,
+   83.86,
+   83.59,
+   83.7,
+   83.63
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.3": {
+  "value": [
+   97.13,
+   97.13,
+   97.13,
+   97.13,
+   97.13
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.7": {
+  "value": [
+   88.09,
+   88.09,
+   88.09,
+   88.09,
+   88.09
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.11": {
+  "value": [
+   75.2,
+   75.2,
+   75.2,
+   75.2,
+   75.2
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.15": {
+  "value": [
+   61.65,
+   61.65,
+   61.71,
+   61.7,
+   61.7
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.19": {
+  "value": [
+   47.29,
+   47.39,
+   47.57,
+   47.38,
+   47.49
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.23": {
+  "value": [
+   34.75,
+   33.96,
+   34.35,
+   34.21,
+   34.27
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s168_i140_ref.25.4": {
+  "value": [
+   28.63,
+   28.17,
+   28.4,
+   28.36,
+   28.52
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.3": {
+  "value": [
+   97.11,
+   97.11,
+   97.11,
+   97.11,
+   97.11
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.7": {
+  "value": [
+   88.13,
+   88.13,
+   88.13,
+   88.13,
+   88.13
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.11": {
+  "value": [
+   75.2,
+   75.2,
+   75.2,
+   75.2,
+   75.2
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.15": {
+  "value": [
+   61.44,
+   61.36,
+   61.45,
+   61.4,
+   61.39
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.19": {
+  "value": [
+   46.94,
+   47.44,
+   47.25,
+   47.09,
+   47.24
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.23": {
+  "value": [
+   34.0,
+   34.02,
+   34.12,
+   34.14,
+   34.14
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s67_i140.25.4": {
+  "value": [
+   28.13,
+   28.26,
+   28.2,
+   28.23,
+   28.14
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.3": {
+  "value": [
+   97.06,
+   97.06,
+   97.06,
+   97.06,
+   97.06
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.7": {
+  "value": [
+   88.11,
+   88.11,
+   88.11,
+   88.11,
+   88.11
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.11": {
+  "value": [
+   75.14,
+   75.14,
+   75.14,
+   75.14,
+   75.14
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.15": {
+  "value": [
+   61.7,
+   61.66,
+   61.68,
+   61.66,
+   61.75
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.19": {
+  "value": [
+   47.51,
+   47.68,
+   47.33,
+   47.53,
+   47.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.23": {
+  "value": [
+   34.14,
+   34.47,
+   34.03,
+   34.44,
+   34.31
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s17_i140.25.4": {
+  "value": [
+   28.29,
+   28.38,
+   28.17,
+   28.49,
+   28.29
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.3": {
+  "value": [
+   97.06,
+   97.06,
+   97.06,
+   97.06,
+   97.06
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.7": {
+  "value": [
+   88.14,
+   88.14,
+   88.14,
+   88.14,
+   88.14
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.11": {
+  "value": [
+   75.25,
+   75.25,
+   75.25,
+   75.25,
+   75.25
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.15": {
+  "value": [
+   61.65,
+   61.67,
+   61.65,
+   61.62,
+   61.6
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.19": {
+  "value": [
+   47.47,
+   47.24,
+   47.56,
+   47.22,
+   47.18
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.23": {
+  "value": [
+   34.26,
+   34.04,
+   34.38,
+   34.28,
+   34.38
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i140.25.4": {
+  "value": [
+   28.25,
+   27.95,
+   28.3,
+   28.27,
+   28.26
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.3": {
+  "value": [
+   96.89,
+   96.89,
+   96.89,
+   96.89,
+   96.89
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.7": {
+  "value": [
+   88.06,
+   88.06,
+   88.06,
+   88.06,
+   88.06
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.11": {
+  "value": [
+   75.5,
+   75.5,
+   75.5,
+   75.5,
+   75.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.15": {
+  "value": [
+   62.43,
+   62.34,
+   62.39,
+   62.36,
+   62.4
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.19": {
+  "value": [
+   47.6,
+   47.4,
+   47.5,
+   47.45,
+   47.44
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.23": {
+  "value": [
+   34.3,
+   34.34,
+   35.94,
+   34.21,
+   33.8
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i140.25.4": {
+  "value": [
+   28.18,
+   28.61,
+   28.55,
+   28.51,
+   28.21
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.3": {
+  "value": [
+   96.75,
+   96.75,
+   96.75,
+   96.75,
+   96.75
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.7": {
+  "value": [
+   87.84,
+   87.84,
+   87.84,
+   87.84,
+   87.84
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.11": {
+  "value": [
+   75.53,
+   75.53,
+   75.53,
+   75.53,
+   75.53
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.15": {
+  "value": [
+   62.23,
+   62.28,
+   62.2,
+   62.29,
+   62.22
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.19": {
+  "value": [
+   47.26,
+   47.16,
+   47.2,
+   47.3,
+   47.24
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.23": {
+  "value": [
+   34.02,
+   34.17,
+   34.2,
+   34.14,
+   34.38
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i140.25.4": {
+  "value": [
+   28.42,
+   27.91,
+   27.79,
+   27.91,
+   28.64
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.3": {
+  "value": [
+   97.0,
+   97.0,
+   97.0,
+   97.0,
+   97.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.7": {
+  "value": [
+   87.97,
+   87.97,
+   87.97,
+   87.97,
+   87.97
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.11": {
+  "value": [
+   75.05,
+   75.05,
+   75.05,
+   75.05,
+   75.05
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.15": {
+  "value": [
+   61.41,
+   61.44,
+   61.44,
+   61.53,
+   61.48
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.19": {
+  "value": [
+   46.91,
+   46.95,
+   47.07,
+   47.35,
+   47.01
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.23": {
+  "value": [
+   34.45,
+   34.36,
+   34.51,
+   34.61,
+   34.42
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i70.25.4": {
+  "value": [
+   28.36,
+   28.34,
+   28.37,
+   28.59,
+   28.2
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.3": {
+  "value": [
+   96.98,
+   96.98,
+   96.98,
+   96.98,
+   96.98
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.7": {
+  "value": [
+   88.11,
+   88.11,
+   88.11,
+   88.11,
+   88.11
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.11": {
+  "value": [
+   75.71,
+   75.71,
+   75.71,
+   75.71,
+   75.71
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.15": {
+  "value": [
+   62.35,
+   62.35,
+   62.32,
+   62.3,
+   62.23
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.19": {
+  "value": [
+   47.38,
+   47.58,
+   47.5,
+   47.65,
+   47.44
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.23": {
+  "value": [
+   33.37,
+   35.26,
+   36.58,
+   33.9,
+   34.06
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i35.25.4": {
+  "value": [
+   26.81,
+   28.93,
+   28.5,
+   28.12,
+   28.42
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.3": {
+  "value": [
+   97.0,
+   97.0,
+   97.0,
+   97.0,
+   97.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.7": {
+  "value": [
+   87.8,
+   87.8,
+   87.8,
+   87.8,
+   87.8
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.11": {
+  "value": [
+   75.0,
+   75.0,
+   75.0,
+   75.0,
+   75.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.15": {
+  "value": [
+   61.56,
+   61.62,
+   61.61,
+   61.46,
+   61.66
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.19": {
+  "value": [
+   47.44,
+   47.23,
+   47.48,
+   47.14,
+   47.57
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.23": {
+  "value": [
+   34.14,
+   34.03,
+   34.08,
+   34.04,
+   34.27
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i20.25.4": {
+  "value": [
+   27.26,
+   27.61,
+   27.52,
+   27.7,
+   27.63
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.3": {
+  "value": [
+   96.91,
+   96.91,
+   96.91,
+   96.91,
+   96.91
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.7": {
+  "value": [
+   87.86,
+   87.86,
+   87.86,
+   87.86,
+   87.86
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.11": {
+  "value": [
+   75.31,
+   75.31,
+   75.31,
+   75.31,
+   75.31
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.15": {
+  "value": [
+   61.71,
+   61.66,
+   61.67,
+   61.71,
+   61.67
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.19": {
+  "value": [
+   47.86,
+   47.65,
+   47.73,
+   47.82,
+   47.72
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.23": {
+  "value": [
+   33.09,
+   32.77,
+   34.26,
+   33.77,
+   34.1
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s8_i10.25.4": {
+  "value": [
+   26.96,
+   26.91,
+   28.03,
+   27.11,
+   27.62
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.3": {
+  "value": [
+   96.78,
+   96.78,
+   96.78,
+   96.78,
+   96.78
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.7": {
+  "value": [
+   88.0,
+   88.0,
+   88.0,
+   88.0,
+   88.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.11": {
+  "value": [
+   75.58,
+   75.58,
+   75.58,
+   75.58,
+   75.58
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.15": {
+  "value": [
+   62.27,
+   62.35,
+   62.3,
+   62.26,
+   62.27
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.19": {
+  "value": [
+   48.01,
+   47.76,
+   47.81,
+   47.74,
+   47.7
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.23": {
+  "value": [
+   35.02,
+   33.85,
+   33.88,
+   34.87,
+   34.04
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s3_i35.25.4": {
+  "value": [
+   27.85,
+   27.6,
+   27.45,
+   27.51,
+   27.57
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.3": {
+  "value": [
+   96.5,
+   96.5,
+   96.5,
+   96.5,
+   96.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.7": {
+  "value": [
+   87.84,
+   87.84,
+   87.84,
+   87.84,
+   87.84
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.11": {
+  "value": [
+   75.37,
+   75.37,
+   75.37,
+   75.37,
+   75.37
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.15": {
+  "value": [
+   62.14,
+   62.15,
+   62.09,
+   62.15,
+   62.18
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.19": {
+  "value": [
+   48.1,
+   48.0,
+   48.16,
+   47.91,
+   48.01
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.23": {
+  "value": [
+   34.01,
+   33.78,
+   34.05,
+   33.8,
+   33.42
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.vein.legV5_s2_i35.25.4": {
+  "value": [
+   27.76,
+   27.75,
+   27.6,
+   27.66,
+   27.65
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.3": {
+  "value": [
+   101.59,
+   101.59,
+   101.59,
+   101.59,
+   101.59
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.7": {
+  "value": [
+   101.07,
+   101.07,
+   101.07,
+   101.07,
+   101.07
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.11": {
+  "value": [
+   98.71,
+   98.71,
+   98.71,
+   98.71,
+   98.71
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.15": {
+  "value": [
+   93.22,
+   93.23,
+   93.31,
+   93.32,
+   93.3
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.19": {
+  "value": [
+   93.92,
+   93.87,
+   93.92,
+   93.86,
+   93.88
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.23": {
+  "value": [
+   90.36,
+   90.31,
+   90.41,
+   90.36,
+   90.43
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s168_i140_ref.25.4": {
+  "value": [
+   84.75,
+   84.42,
+   84.53,
+   84.79,
+   84.61
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.3": {
+  "value": [
+   101.5,
+   101.5,
+   101.5,
+   101.5,
+   101.5
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.7": {
+  "value": [
+   101.05,
+   101.05,
+   101.05,
+   101.05,
+   101.05
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.11": {
+  "value": [
+   98.7,
+   98.7,
+   98.7,
+   98.7,
+   98.7
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.15": {
+  "value": [
+   92.97,
+   92.93,
+   93.0,
+   93.02,
+   92.99
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.19": {
+  "value": [
+   93.96,
+   93.97,
+   93.9,
+   93.86,
+   93.9
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.23": {
+  "value": [
+   90.22,
+   90.45,
+   90.52,
+   90.5,
+   90.4
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s67_i140.25.4": {
+  "value": [
+   84.99,
+   85.08,
+   84.53,
+   84.79,
+   84.97
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.3": {
+  "value": [
+   101.37,
+   101.37,
+   101.37,
+   101.37,
+   101.37
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.7": {
+  "value": [
+   101.0,
+   101.0,
+   101.0,
+   101.0,
+   101.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.11": {
+  "value": [
+   98.76,
+   98.76,
+   98.76,
+   98.76,
+   98.76
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.15": {
+  "value": [
+   93.35,
+   93.41,
+   93.39,
+   93.32,
+   93.39
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.19": {
+  "value": [
+   93.93,
+   93.91,
+   93.91,
+   93.9,
+   93.94
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.23": {
+  "value": [
+   90.55,
+   90.54,
+   90.53,
+   90.42,
+   90.46
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s17_i140.25.4": {
+  "value": [
+   84.37,
+   84.26,
+   84.55,
+   84.43,
+   84.41
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.3": {
+  "value": [
+   101.34,
+   101.34,
+   101.34,
+   101.34,
+   101.34
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.7": {
+  "value": [
+   100.98,
+   100.98,
+   100.98,
+   100.98,
+   100.98
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.11": {
+  "value": [
+   98.88,
+   98.88,
+   98.88,
+   98.88,
+   98.88
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.15": {
+  "value": [
+   93.11,
+   93.74,
+   93.14,
+   93.13,
+   93.06
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.19": {
+  "value": [
+   93.9,
+   93.91,
+   93.88,
+   93.94,
+   93.92
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.23": {
+  "value": [
+   90.44,
+   90.36,
+   90.37,
+   90.35,
+   90.44
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i140.25.4": {
+  "value": [
+   84.76,
+   83.94,
+   84.45,
+   84.92,
+   84.57
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.3": {
+  "value": [
+   101.15,
+   101.15,
+   101.15,
+   101.15,
+   101.15
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.7": {
+  "value": [
+   100.92,
+   100.92,
+   100.92,
+   100.92,
+   100.92
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.11": {
+  "value": [
+   99.56,
+   99.56,
+   99.56,
+   99.56,
+   99.56
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.15": {
+  "value": [
+   92.75,
+   92.75,
+   92.74,
+   92.73,
+   92.74
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.19": {
+  "value": [
+   94.03,
+   94.05,
+   94.03,
+   94.06,
+   94.03
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.23": {
+  "value": [
+   89.93,
+   89.89,
+   89.74,
+   90.01,
+   89.85
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i140.25.4": {
+  "value": [
+   84.77,
+   84.65,
+   84.98,
+   84.43,
+   84.41
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.3": {
+  "value": [
+   100.95,
+   100.95,
+   100.95,
+   100.95,
+   100.95
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.7": {
+  "value": [
+   100.8,
+   100.8,
+   100.8,
+   100.8,
+   100.8
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.11": {
+  "value": [
+   99.61,
+   99.61,
+   99.61,
+   99.61,
+   99.61
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.15": {
+  "value": [
+   93.1,
+   93.07,
+   93.0,
+   93.06,
+   93.03
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.19": {
+  "value": [
+   93.96,
+   93.88,
+   93.99,
+   94.03,
+   93.95
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.23": {
+  "value": [
+   89.35,
+   89.39,
+   89.43,
+   89.5,
+   89.45
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i140.25.4": {
+  "value": [
+   84.41,
+   84.48,
+   84.51,
+   84.07,
+   84.38
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.3": {
+  "value": [
+   101.47,
+   101.47,
+   101.47,
+   101.47,
+   101.47
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.7": {
+  "value": [
+   101.05,
+   101.05,
+   101.05,
+   101.05,
+   101.05
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.11": {
+  "value": [
+   98.79,
+   98.79,
+   98.79,
+   98.79,
+   98.79
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.15": {
+  "value": [
+   92.93,
+   92.94,
+   92.97,
+   93.02,
+   93.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.19": {
+  "value": [
+   93.92,
+   93.94,
+   93.93,
+   93.94,
+   93.93
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.23": {
+  "value": [
+   90.44,
+   90.25,
+   90.56,
+   90.25,
+   90.23
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i70.25.4": {
+  "value": [
+   84.31,
+   84.48,
+   84.81,
+   84.36,
+   84.57
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.3": {
+  "value": [
+   101.62,
+   101.62,
+   101.62,
+   101.62,
+   101.62
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.7": {
+  "value": [
+   101.09,
+   101.09,
+   101.09,
+   101.09,
+   101.09
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.11": {
+  "value": [
+   99.49,
+   99.49,
+   99.49,
+   99.49,
+   99.49
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.15": {
+  "value": [
+   92.83,
+   92.84,
+   92.86,
+   92.86,
+   92.87
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.19": {
+  "value": [
+   94.17,
+   94.16,
+   94.18,
+   94.11,
+   94.05
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.23": {
+  "value": [
+   89.91,
+   89.83,
+   89.65,
+   89.87,
+   89.83
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i35.25.4": {
+  "value": [
+   84.33,
+   85.12,
+   84.78,
+   84.59,
+   85.07
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.3": {
+  "value": [
+   101.8,
+   101.8,
+   101.8,
+   101.8,
+   101.8
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.7": {
+  "value": [
+   101.21,
+   101.21,
+   101.21,
+   101.21,
+   101.21
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.11": {
+  "value": [
+   98.16,
+   98.16,
+   98.16,
+   98.16,
+   98.16
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.15": {
+  "value": [
+   93.48,
+   93.51,
+   93.54,
+   93.51,
+   93.45
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.19": {
+  "value": [
+   93.94,
+   93.98,
+   93.92,
+   93.98,
+   93.91
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.23": {
+  "value": [
+   90.36,
+   90.22,
+   90.24,
+   90.3,
+   90.43
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i20.25.4": {
+  "value": [
+   83.74,
+   83.71,
+   83.65,
+   83.7,
+   83.86
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.3": {
+  "value": [
+   101.66,
+   101.66,
+   101.66,
+   101.66,
+   101.66
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.7": {
+  "value": [
+   101.24,
+   101.24,
+   101.24,
+   101.24,
+   101.24
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.11": {
+  "value": [
+   98.09,
+   98.09,
+   98.09,
+   98.09,
+   98.09
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.15": {
+  "value": [
+   93.26,
+   93.27,
+   93.27,
+   93.26,
+   93.23
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.19": {
+  "value": [
+   93.96,
+   94.02,
+   94.01,
+   93.97,
+   94.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.23": {
+  "value": [
+   89.82,
+   89.89,
+   90.13,
+   90.08,
+   90.16
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s8_i10.25.4": {
+  "value": [
+   83.52,
+   83.6,
+   83.57,
+   83.14,
+   83.74
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.3": {
+  "value": [
+   101.22,
+   101.22,
+   101.22,
+   101.22,
+   101.22
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.7": {
+  "value": [
+   101.04,
+   101.04,
+   101.04,
+   101.04,
+   101.04
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.11": {
+  "value": [
+   99.67,
+   99.67,
+   99.67,
+   99.67,
+   99.67
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.15": {
+  "value": [
+   92.85,
+   92.85,
+   92.87,
+   92.85,
+   92.84
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.19": {
+  "value": [
+   94.08,
+   94.12,
+   94.12,
+   94.14,
+   94.1
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.23": {
+  "value": [
+   90.02,
+   89.65,
+   89.87,
+   89.86,
+   89.99
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s3_i35.25.4": {
+  "value": [
+   84.0,
+   83.45,
+   83.8,
+   83.78,
+   83.43
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.3": {
+  "value": [
+   100.64,
+   100.64,
+   100.64,
+   100.64,
+   100.64
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.7": {
+  "value": [
+   100.91,
+   100.91,
+   100.91,
+   100.91,
+   100.91
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.11": {
+  "value": [
+   99.74,
+   99.74,
+   99.74,
+   99.74,
+   99.74
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.15": {
+  "value": [
+   92.88,
+   92.91,
+   92.89,
+   92.92,
+   92.94
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.19": {
+  "value": [
+   94.12,
+   94.13,
+   94.1,
+   94.14,
+   94.16
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.23": {
+  "value": [
+   90.02,
+   89.96,
+   90.02,
+   89.98,
+   90.0
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "app.artery.legV5_s2_i35.25.4": {
+  "value": [
+   83.91,
+   83.86,
+   83.59,
+   83.7,
+   83.63
+  ],
+  "source": "data/meshF_repeats/per_run.csv"
+ },
+ "sens.control.vein.3": {
+  "value": [
+   96.5,
+   96.5,
+   96.5,
+   96.5,
+   96.5
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.7": {
+  "value": [
+   87.84,
+   87.84,
+   87.84,
+   87.84,
+   87.84
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.11": {
+  "value": [
+   75.37,
+   75.37,
+   75.37,
+   75.37,
+   75.37
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.15": {
+  "value": [
+   62.11,
+   62.14,
+   62.06,
+   62.09,
+   62.14
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.19": {
+  "value": [
+   47.95,
+   47.96,
+   48.04,
+   47.93,
+   48.15
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.23": {
+  "value": [
+   33.86,
+   33.68,
+   33.74,
+   33.98,
+   33.32
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.vein.25.4": {
+  "value": [
+   27.69,
+   27.56,
+   27.59,
+   27.69,
+   27.42
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.3": {
+  "value": [
+   96.74,
+   96.74,
+   96.74,
+   96.74,
+   96.74
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.7": {
+  "value": [
+   88.51,
+   88.51,
+   88.51,
+   88.51,
+   88.51
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.11": {
+  "value": [
+   76.47,
+   76.47,
+   76.47,
+   76.47,
+   76.47
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.15": {
+  "value": [
+   63.67,
+   63.58,
+   63.62,
+   63.6,
+   63.68
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.19": {
+  "value": [
+   49.64,
+   49.73,
+   49.76,
+   49.63,
+   49.48
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.23": {
+  "value": [
+   34.95,
+   34.47,
+   34.7,
+   34.85,
+   34.43
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.vein.25.4": {
+  "value": [
+   28.09,
+   27.88,
+   27.55,
+   27.95,
+   27.57
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.3": {
+  "value": [
+   97.77,
+   97.77,
+   97.77,
+   97.77,
+   97.77
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.7": {
+  "value": [
+   91.76,
+   91.76,
+   91.76,
+   91.76,
+   91.76
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.11": {
+  "value": [
+   81.76,
+   81.75,
+   81.76,
+   81.76,
+   81.76
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.15": {
+  "value": [
+   71.09,
+   71.07,
+   71.11,
+   71.1,
+   71.12
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.19": {
+  "value": [
+   58.26,
+   58.19,
+   58.36,
+   58.17,
+   58.23
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.23": {
+  "value": [
+   45.6,
+   45.53,
+   45.93,
+   45.65,
+   45.8
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.vein.25.4": {
+  "value": [
+   34.98,
+   35.5,
+   36.04,
+   35.24,
+   34.8
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.3": {
+  "value": [
+   98.8,
+   98.8,
+   98.8,
+   98.8,
+   98.8
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.7": {
+  "value": [
+   95.46,
+   95.46,
+   95.46,
+   95.46,
+   95.46
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.11": {
+  "value": [
+   88.05,
+   88.05,
+   88.05,
+   88.05,
+   88.05
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.15": {
+  "value": [
+   80.41,
+   80.4,
+   80.52,
+   80.41,
+   80.46
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.19": {
+  "value": [
+   71.4,
+   71.39,
+   71.68,
+   71.35,
+   71.57
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.23": {
+  "value": [
+   60.27,
+   60.17,
+   60.48,
+   60.34,
+   60.46
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.vein.25.4": {
+  "value": [
+   51.2,
+   51.27,
+   51.38,
+   51.45,
+   51.68
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.3": {
+  "value": [
+   99.51,
+   99.51,
+   99.51,
+   99.51,
+   99.51
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.7": {
+  "value": [
+   98.25,
+   98.25,
+   98.25,
+   98.25,
+   98.25
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.11": {
+  "value": [
+   93.32,
+   93.32,
+   93.32,
+   93.32,
+   93.32
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.15": {
+  "value": [
+   88.31,
+   88.32,
+   88.29,
+   88.32,
+   88.31
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.19": {
+  "value": [
+   82.79,
+   82.74,
+   82.77,
+   82.8,
+   82.81
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.23": {
+  "value": [
+   75.91,
+   75.93,
+   75.93,
+   76.03,
+   75.98
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.vein.25.4": {
+  "value": [
+   70.3,
+   70.34,
+   70.33,
+   70.41,
+   70.36
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.3": {
+  "value": [
+   99.86,
+   99.86,
+   99.86,
+   99.86,
+   99.86
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.7": {
+  "value": [
+   99.97,
+   99.97,
+   99.97,
+   99.97,
+   99.97
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.11": {
+  "value": [
+   100.55,
+   100.55,
+   100.55,
+   100.55,
+   100.55
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.15": {
+  "value": [
+   98.7,
+   98.71,
+   98.71,
+   98.72,
+   98.71
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.19": {
+  "value": [
+   96.14,
+   96.15,
+   96.14,
+   96.14,
+   96.15
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.23": {
+  "value": [
+   94.05,
+   94.08,
+   94.09,
+   94.05,
+   94.05
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.vein.25.4": {
+  "value": [
+   93.08,
+   93.04,
+   92.95,
+   92.94,
+   92.95
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.3": {
+  "value": [
+   96.51,
+   96.51,
+   96.51,
+   96.51,
+   96.51
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.7": {
+  "value": [
+   87.84,
+   87.84,
+   87.84,
+   87.84,
+   87.84
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.11": {
+  "value": [
+   75.51,
+   75.51,
+   75.51,
+   75.51,
+   75.51
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.15": {
+  "value": [
+   62.3,
+   62.3,
+   62.38,
+   62.3,
+   62.33
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.19": {
+  "value": [
+   47.93,
+   47.9,
+   47.93,
+   47.88,
+   47.92
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.23": {
+  "value": [
+   33.7,
+   33.73,
+   34.1,
+   33.46,
+   33.62
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.vein.25.4": {
+  "value": [
+   27.46,
+   27.51,
+   27.63,
+   27.63,
+   27.62
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.3": {
+  "value": [
+   96.5,
+   96.5,
+   96.5,
+   96.5,
+   96.5
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.7": {
+  "value": [
+   87.85,
+   87.85,
+   87.85,
+   87.85,
+   87.85
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.11": {
+  "value": [
+   75.34,
+   75.34,
+   75.34,
+   75.34,
+   75.34
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.15": {
+  "value": [
+   62.16,
+   62.13,
+   62.18,
+   62.2,
+   62.18
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.19": {
+  "value": [
+   47.89,
+   47.88,
+   47.96,
+   47.92,
+   47.81
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.23": {
+  "value": [
+   34.08,
+   34.1,
+   34.37,
+   33.87,
+   33.8
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.vein.25.4": {
+  "value": [
+   27.72,
+   27.77,
+   28.13,
+   27.59,
+   27.62
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.3": {
+  "value": [
+   100.64,
+   100.64,
+   100.64,
+   100.64,
+   100.64
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.7": {
+  "value": [
+   100.91,
+   100.91,
+   100.91,
+   100.91,
+   100.91
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.11": {
+  "value": [
+   99.74,
+   99.74,
+   99.74,
+   99.74,
+   99.74
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.15": {
+  "value": [
+   92.92,
+   92.92,
+   92.91,
+   92.9,
+   92.92
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.19": {
+  "value": [
+   94.12,
+   94.2,
+   94.14,
+   94.16,
+   94.11
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.23": {
+  "value": [
+   89.87,
+   90.03,
+   89.97,
+   89.83,
+   90.0
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.control.artery.25.4": {
+  "value": [
+   83.71,
+   83.76,
+   83.64,
+   83.63,
+   83.45
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.3": {
+  "value": [
+   100.69,
+   100.69,
+   100.69,
+   100.69,
+   100.69
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.7": {
+  "value": [
+   100.9,
+   100.9,
+   100.9,
+   100.9,
+   100.9
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.11": {
+  "value": [
+   99.74,
+   99.74,
+   99.74,
+   99.74,
+   99.74
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.15": {
+  "value": [
+   92.88,
+   92.86,
+   92.86,
+   92.85,
+   92.87
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.19": {
+  "value": [
+   94.06,
+   94.11,
+   94.1,
+   94.11,
+   94.03
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.23": {
+  "value": [
+   90.07,
+   89.96,
+   90.04,
+   90.07,
+   90.07
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_uniform_20kpa.artery.25.4": {
+  "value": [
+   83.76,
+   83.91,
+   83.89,
+   83.97,
+   83.7
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.3": {
+  "value": [
+   100.72,
+   100.72,
+   100.72,
+   100.72,
+   100.72
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.7": {
+  "value": [
+   100.99,
+   100.99,
+   100.99,
+   100.99,
+   100.99
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.11": {
+  "value": [
+   99.87,
+   99.87,
+   99.87,
+   99.87,
+   99.87
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.15": {
+  "value": [
+   92.99,
+   92.98,
+   93.01,
+   93.0,
+   93.0
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.19": {
+  "value": [
+   94.3,
+   94.25,
+   94.34,
+   94.33,
+   94.34
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.23": {
+  "value": [
+   90.44,
+   90.45,
+   90.46,
+   90.51,
+   90.45
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_034mm.artery.25.4": {
+  "value": [
+   84.89,
+   84.55,
+   85.02,
+   84.76,
+   84.57
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.3": {
+  "value": [
+   100.63,
+   100.63,
+   100.63,
+   100.63,
+   100.63
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.7": {
+  "value": [
+   101.15,
+   101.15,
+   101.15,
+   101.15,
+   101.15
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.11": {
+  "value": [
+   100.19,
+   100.19,
+   100.19,
+   100.19,
+   100.19
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.15": {
+  "value": [
+   93.33,
+   93.3,
+   93.35,
+   93.33,
+   93.35
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.19": {
+  "value": [
+   94.81,
+   94.77,
+   94.86,
+   94.85,
+   94.86
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.23": {
+  "value": [
+   91.21,
+   91.22,
+   91.14,
+   91.2,
+   91.16
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_bend_050mm.artery.25.4": {
+  "value": [
+   86.24,
+   86.38,
+   86.28,
+   86.19,
+   86.05
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.3": {
+  "value": [
+   100.49,
+   100.49,
+   100.49,
+   100.49,
+   100.49
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.7": {
+  "value": [
+   101.42,
+   101.42,
+   101.42,
+   101.42,
+   101.42
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.11": {
+  "value": [
+   100.65,
+   100.65,
+   100.65,
+   100.65,
+   100.65
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.15": {
+  "value": [
+   93.95,
+   93.96,
+   93.95,
+   93.93,
+   93.95
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.19": {
+  "value": [
+   95.69,
+   95.68,
+   95.65,
+   95.66,
+   95.73
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.23": {
+  "value": [
+   92.19,
+   92.1,
+   92.15,
+   92.17,
+   92.19
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_600kpa.artery.25.4": {
+  "value": [
+   87.64,
+   87.43,
+   87.56,
+   87.43,
+   87.59
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.3": {
+  "value": [
+   99.81,
+   99.81,
+   99.81,
+   99.81,
+   99.81
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.7": {
+  "value": [
+   100.41,
+   100.41,
+   100.41,
+   100.41,
+   100.41
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.11": {
+  "value": [
+   101.07,
+   101.07,
+   101.07,
+   101.07,
+   101.07
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.15": {
+  "value": [
+   100.36,
+   100.37,
+   100.35,
+   100.35,
+   100.37
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.19": {
+  "value": [
+   94.19,
+   94.07,
+   94.06,
+   94.1,
+   94.17
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.23": {
+  "value": [
+   96.82,
+   96.84,
+   96.86,
+   96.87,
+   96.85
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.vein_5p7mpa.artery.25.4": {
+  "value": [
+   91.48,
+   91.57,
+   91.65,
+   91.77,
+   91.45
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.3": {
+  "value": [
+   100.7,
+   100.7,
+   100.7,
+   100.7,
+   100.7
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.7": {
+  "value": [
+   100.9,
+   100.9,
+   100.9,
+   100.9,
+   100.9
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.11": {
+  "value": [
+   99.72,
+   99.72,
+   99.72,
+   99.72,
+   99.72
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.15": {
+  "value": [
+   92.95,
+   92.95,
+   92.94,
+   92.96,
+   92.98
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.19": {
+  "value": [
+   94.09,
+   94.16,
+   94.21,
+   94.21,
+   94.21
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.23": {
+  "value": [
+   89.91,
+   89.88,
+   89.8,
+   89.85,
+   89.77
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_20kpa.artery.25.4": {
+  "value": [
+   83.41,
+   83.56,
+   83.7,
+   83.23,
+   83.5
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.3": {
+  "value": [
+   100.63,
+   100.63,
+   100.63,
+   100.63,
+   100.63
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.7": {
+  "value": [
+   100.93,
+   100.93,
+   100.93,
+   100.93,
+   100.93
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.11": {
+  "value": [
+   99.76,
+   99.76,
+   99.76,
+   99.76,
+   99.76
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.15": {
+  "value": [
+   92.94,
+   92.91,
+   92.93,
+   92.92,
+   92.93
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.19": {
+  "value": [
+   94.07,
+   94.08,
+   94.07,
+   94.13,
+   94.14
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.23": {
+  "value": [
+   90.36,
+   90.34,
+   90.32,
+   90.22,
+   90.37
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.nerve_80kpa.artery.25.4": {
+  "value": [
+   83.79,
+   83.84,
+   83.73,
+   83.67,
+   83.59
+  ],
+  "source": "data/sensitivity/per_run.csv"
+ },
+ "sens.unsettled": {
+  "value": {},
+  "source": "depth_rows veto != none, V5 sensitivity runs"
+ }
+}

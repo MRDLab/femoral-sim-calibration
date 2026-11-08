@@ -1,0 +1,31 @@
+\begin{table}[!tbp]
+\centering
+\caption{The benchtop phantom against the anatomical model. Leg model (CAD): the cross-section 20~mm below the inguinal
+ligament, as meshed, with the benchtop phantom's two simplifications (no pubic ramus; 81~mm long); moduli in
+Table~\ref{tab:anatomy}. Benchtop: the mold's design dimensions and catalogue tube sizes, not caliper measurements of the
+benchtop phantom; moduli are supplier values. It has no sheath, femoral canal or nerve.}
+\label{tab:phantom_parameters}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X>{\centering\arraybackslash}p{2.0cm}>{\centering\arraybackslash}p{2.35cm}@{}}
+\hline
+\textbf{Parameter} & \textbf{Leg model (CAD)} & \textbf{Benchtop} \\
+\hline
+Length along the limb & 81~mm & 81~mm \\
+Diameter & 184.9~mm & 184.1~mm \\
+Skin and fat thickness & 16.0~mm & 15.9~mm \\
+Artery lumen diameter & 6.96~mm & 9.00~mm \\
+Vein lumen diameter & 9.95~mm & 10.00~mm \\
+Artery wall thickness & 1.00~mm & 1.00~mm \\
+Vein wall thickness & 0.50~mm & 1.50~mm \\
+Skin to artery inner wall & 19.5~mm & 22.6~mm \\
+Skin to vein inner wall & 17.8~mm & 20.8~mm \\
+Artery to vein, center to center & 10.0~mm & 16.0~mm \\
+\hline
+Tissue model & Neo-Hookean; moduli in Table~\ref{tab:anatomy} & Neo-Hookean; values below \\
+Soft-tissue material & -- & SimuGel blends (muscle \#0+\#1, fat \#2+\#0) \\
+Young's modulus, muscle / fat & -- & 510 / 380~kPa (supplier, mixed by mass) \\
+Vessel walls & -- & silicone tubes, 70A artery / 35A vein \\
+\hline
+\end{tabularx}
+\end{table}

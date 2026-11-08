@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{Time-step study on the slab, stability: 1.5~mm elements, 140 iterations per step, no CUDA Graphs, no blood
+pressure inside the vessels. The probe contact acts as a stiff spring on each surface node, with period
+$T = 2\pi\sqrt{\rho\,\Delta x^3/k_e} = 0.258$~ms ($\rho = 1000$~kg/m$^3$, $\Delta x$ = 1.5~mm,
+$k_e$ = 2,000~N/m). Settled: every depth met the rule of 30 frames within 2\%; no ($k$ of 7): $k$ depths ran to the frame cap without
+settling. Most frames: the largest number of frames any settled depth needed. Largest gap: largest difference from the 0.0186~ms reference over the seven depths, in
+points. Wall clock: one seven-depth press, alone on the GPU. Red: fewer than the three planned runs; n shown.}
+\label{tab:timestep_results}
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{ccccccc}
+\hline
+\textbf{Time step} & \textbf{Per frame} & \textbf{Step / $T$} & \textbf{Settled} & \textbf{Most frames} &
+\textbf{Largest gap} & \textbf{Wall clock} \\
+\hline
+0.0186~ms & 896 & 0.07 & yes & 127$\pm$42 & ref. & 582.2$\pm$30.6~min \\
+0.099~ms & 168 & 0.38 & yes & 177$\pm$3 & 2.26$\pm$0.13 & 116.9$\pm$1.2~min \\
+0.249~ms & 67 & 0.96 & \textbf{no} (4 of 7) & 192$\pm$37 & 2.60$\pm$0.27 & 137.3$\pm$9.0~min \\
+0.980~ms & 17 & 3.80 & \textbf{no} (2 of 7) & 167$\pm$8 & 5.72$\pm$0.07 & 31.5$\pm$0.6~min \\
+2.08~ms & 8 & 8.07 & yes & 140$\pm$2 & 1.50$\pm$0.03 & 6.4$\pm$0.1~min \\
+5.56~ms & 3 & 21.52 & yes & 247$\pm$0 & 4.67$\pm$0.39 & 4.6$\pm$0.1~min \\
+8.33~ms & 2 & 32.29 & yes & 137$\pm$4 & 1.89$\pm$0.02 & 2.4$\pm$0.1~min \\
+\hline
+\end{tabular}
+\end{table*}

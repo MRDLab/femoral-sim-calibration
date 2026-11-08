@@ -1,0 +1,139 @@
+{
+ "mesh": "tetmesh_leg_v5_s020_f1p5_c30_w30_bone.npz",
+ "digest": "d14afb0ae307",
+ "built": "2026-09-09",
+ "n_tets": 129783,
+ "n_nodes": 23688,
+ "n_pinned": 352,
+ "boundary_faces": 10920,
+ "lumen_faces": 1534,
+ "median_tet_edge_mm": 2.126914327426877,
+ "frac_edge_lt_2mm": 0.29089326028832746,
+ "frac_edge_lt_2p5mm": 0.8938535863710964,
+ "frac_edge_lt_3mm": 0.9396608184430935,
+ "frac_edge_gt_15mm": 0.007327616097639907,
+ "x_vein_mm": 11.187463612875284,
+ "z_vein_mm": 68.89,
+ "r_skin_mm": 92.46202413294733,
+ "fine_depth_mm": 30.137029740986073,
+ "body_s_ranges_nominal_mm": {
+  "Artery": [
+   0.0,
+   37.5
+  ],
+  "BloodArtery": [
+   0.0,
+   37.5
+  ],
+  "Vein": [
+   0.0,
+   80.0
+  ],
+  "BloodVein": [
+   0.0,
+   80.0
+  ],
+  "Nerve": [
+   0.0,
+   25.0
+  ],
+  "Sheath": [
+   0.0,
+   35.0
+  ],
+  "Perivascular": [
+   0.3000000000000007,
+   34.7
+  ],
+  "FemoralCanal": [
+   0.0,
+   12.5
+  ],
+  "PubicRamus": null,
+  "Femur": [
+   -58.051331000000005,
+   81.0
+  ],
+  "Muscle": [
+   0.0,
+   81.0
+  ],
+  "SoftTissue": [
+   0.0,
+   81.0
+  ]
+ },
+ "body_s_extent_measured_mm": {
+  "SoftTissue": [
+   -0.0,
+   81.0
+  ],
+  "Muscle": [
+   -0.0,
+   81.0
+  ],
+  "Femur": [
+   -0.0,
+   81.0
+  ],
+  "Sheath": [
+   -0.0,
+   35.19
+  ],
+  "Perivascular": [
+   -0.0,
+   36.26
+  ],
+  "Artery": [
+   -0.0,
+   36.26
+  ],
+  "Vein": [
+   -0.0,
+   32.83
+  ],
+  "Nerve": [
+   -0.0,
+   26.2
+  ]
+ },
+ "lumen_void_s_max_mm": {
+  "artery": 36.26,
+  "vein": 36.26,
+  "vein_faces_beyond_s35": 1
+ },
+ "per_body": {
+  "SoftTissue": {
+   "tets": 75068,
+   "median_E_kpa": 3.000000081787109
+  },
+  "Muscle": {
+   "tets": 43473,
+   "median_E_kpa": 20.000000087890626
+  },
+  "Femur": {
+   "tets": 1094,
+   "median_E_kpa": 20.000000087890626
+  },
+  "Sheath": {
+   "tets": 897,
+   "median_E_kpa": 15.363636416015625
+  },
+  "Perivascular": {
+   "tets": 7105,
+   "median_E_kpa": 3.000000081787109
+  },
+  "Artery": {
+   "tets": 961,
+   "median_E_kpa": 471.11111734375004
+  },
+  "Vein": {
+   "tets": 412,
+   "median_E_kpa": 14.333333530273437
+  },
+  "Nerve": {
+   "tets": 773,
+   "median_E_kpa": 36.63636275390625
+  }
+ }
+}

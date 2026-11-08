@@ -1,0 +1,11 @@
+body,role,slab_tetrahedra,leg_tetrahedra
+SoftTissue,skin and subcutaneous fat,33363,75068
+Muscle,muscle,123112,43473
+Femur,femur (held fixed),517,1094
+PubicRamus,superior pubic ramus (held fixed),0,0
+Sheath,femoral sheath wall,1243,897
+Perivascular,sheath contents (areolar tissue),5709,7105
+Artery,common femoral artery wall,704,961
+Vein,common femoral vein wall,363,412
+Nerve,femoral nerve,858,773
+void,boundary cells with blended tissue properties,517,0

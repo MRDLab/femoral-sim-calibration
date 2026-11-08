@@ -1,0 +1,25 @@
+\begin{table}[!tbp]
+\centering
+\caption{Where the wall clock goes on the leg model, one RTX 5090, solver only. Top: the cost model fitted to every
+repeated run, minimizing relative error; $\pm$ is one standard deviation by bootstrap over runs. The per-time-step cost is
+why two settings with equal solver work differ in speed. Bottom: median wall clock per frame with CUDA Graphs off and on
+(the GPU work recorded once and replayed as one launch), at equal settings; gain = off / on. Red: fewer than the five
+planned runs, or awaiting runs; n shown.}
+\label{tab:cost}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lccc@{}}
+\hline
+\multicolumn{4}{@{}p{\columnwidth}@{}}{\textbf{Cost per simulated frame} (60 runs; residuals: mean 0.99\%, largest 4.57\%)} \\
+\quad per solver pass & \multicolumn{3}{l}{0.400 $\pm$ 0.001~ms} \\
+\quad per time step & \multicolumn{3}{l}{0.20 $\pm$ 0.03~ms} \\
+\quad per frame, fixed & \multicolumn{3}{l}{2.04 $\pm$ 0.16~ms} \\
+\hline
+\textbf{Time step, iterations} & \textbf{Graph off (ms)} & \textbf{Graph on (ms)} & \textbf{Gain} \\
+\hline
+8.33~ms, 35 & 90.4$\pm$0.5 & 30.4$\pm$0.1 & 2.97$\pm$0.01$\times$ \\
+2.08~ms, 35 & 358.6$\pm$2.3 & 117.5$\pm$1.7 & 3.05$\pm$0.04$\times$ \\
+0.099~ms, 140 & 29701.8$\pm$135.6 & 9301.7$\pm$210.9 & 3.19$\pm$0.07$\times$ \\
+\hline
+\end{tabular*}
+\end{table}

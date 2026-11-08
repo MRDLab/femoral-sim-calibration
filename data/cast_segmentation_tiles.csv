@@ -1,0 +1,25 @@
+press,trial,depth,file,sha256_12,separate_session
+0,1,first contact,frames/Press_0-1.PNG,eab138a1d701,False
+0,2,first contact,frames/Press_0-2.PNG,3dcd76f4f07c,False
+0,3,first contact,frames/Press_0-3.PNG,badc271778b9,False
+2,1,3 mm,originals/IMG_5670.PNG,bb9f84439bb0,False
+2,2,3 mm,originals/IMG_5671.PNG,4f9bf7441b60,False
+2,3,3 mm,originals/IMG_5672.PNG,e6b96bf8882d,False
+3,1,7 mm,originals/IMG_5673.PNG,9a76263bc138,False
+3,2,7 mm,originals/IMG_5674.PNG,1313b28e4443,False
+3,3,7 mm,originals/IMG_5675.PNG,00638444a508,False
+4,1,11 mm,originals/IMG_5676.PNG,4453bab33ff6,False
+4,2,11 mm,originals/IMG_5677.PNG,939c676bf19f,False
+4,3,11 mm,originals/IMG_5678.PNG,f77e568549dc,False
+5,1,15 mm,originals/IMG_5679.PNG,2cb1b53e03b6,False
+5,2,15 mm,originals/IMG_5680.PNG,1395125597bc,False
+5,3,15 mm,originals/IMG_5681.PNG,a08f9f5a0155,False
+6,1,19 mm,originals/IMG_5682.PNG,33ee551f6f13,False
+6,2,19 mm,originals/IMG_5683.PNG,a4f614e1d312,False
+6,3,19 mm,originals/IMG_5684.PNG,ee1ea4b1a719,False
+7,1,23 mm,originals/IMG_5685.PNG,ce16b9212393,False
+7,2,23 mm,originals/IMG_5686.PNG,3ab26472727e,False
+7,3,23 mm,originals/IMG_5687.PNG,e666e49ebe2d,False
+8,1,25.4 mm,originals/IMG_5688.PNG,0361c4192271,False
+8,2,25.4 mm,originals/IMG_5689.PNG,aa854127a796,False
+8,3,25.4 mm,frames/Press_8-3_session2.PNG,82a5e8ce3420,True

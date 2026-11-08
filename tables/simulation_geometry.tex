@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\centering
+\caption{Geometry and numerical settings of the two meshes, read from the mesh and run files. Sizes are the bounding box
+of the resting mesh; lateral is across the limb, axial along it, depth from the skin inward. The leg column gives the
+chosen setting; the reference setting is 0.099~ms (168 time steps per frame) with 140 iterations per step.
+MC: modeling choice, not backed by a source. $\gamma$ is in seconds in the damping form the solver uses.}
+\label{tab:simulation_geometry}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{2.35cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\hline
+\textbf{Parameter} & \textbf{Slab (parameter study)} & \textbf{Leg model} \\
+\hline
+Domain & block cut from the limb 20~mm below the inguinal ligament; side and deep faces held fixed & whole thigh segment, 81~mm long, held by a small fixed patch where the thigh rests on the table \\
+Lateral width & 72.0~mm & 184.9~mm \\
+Axial length & 16.5~mm & 81.0~mm \\
+Depth & 82.5~mm & 184.9~mm \\
+Nodes & 31,740 & 23,688 \\
+Tetrahedra & 166,386 & 129,783 \\
+Nodes held fixed & 1,896 (side and deep faces, bone) & 352 (bone 342, table patch 10) \\
+Element size & 1.5~mm, uniform & 1.5~mm near the vessels; 5~mm femur; 30~mm elsewhere \\
+Time step & 0.0186~ms (896 per frame) & 8.33~ms (2 per frame) \\
+Iterations per time step & 140 & 35 \\
+Contact stiffness $k_e$ & 2,000~N/m & 2,000~N/m \\
+Damping $\gamma$ (MC) & 1.0~s & 1.0~s \\
+\hline
+\end{tabularx}
+\end{table}

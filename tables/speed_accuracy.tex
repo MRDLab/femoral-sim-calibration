@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\caption{Leg model: speed and accuracy of every solver setting, CUDA Graphs on, solver only. Every filled point of
+Fig.~\ref{fig:speedup} is a row here, labelled or not; the hollow points are in Table~\ref{tab:cost}. Solver work
+(the figure's x axis): time steps per frame $\times$ iterations per step. Speed-up per frame: the reference setting's
+ms per frame over this setting's, as the figure plots it. Speed-up per press: wall clock to settle all seven depths, against
+the reference setting. Faster settings need more frames to settle, so the per-press gain is smaller. Gap: the largest
+difference from the reference setting's mean over the seven depths, in percentage points of resting area. Bold: above the 3-point
+tolerance set before the runs. Mean $\pm$ SD over five runs; red: fewer, n shown.}
+\label{tab:speed}
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Time step, iterations} & \textbf{Work} & \textbf{ms per frame} & \textbf{Speed-up, frame} & \textbf{Speed-up, press} & \textbf{Vein gap} & \textbf{Artery gap} \\
+\hline
+0.099~ms, 140 (reference) & 23,520 & 9302$\pm$211 & 1 & 1 & 0.23$\pm$0.16 & 0.13$\pm$0.06 \\
+0.249~ms, 140 & 9,380 & 3798$\pm$14 & 2.4$\pm$0.0 & 2.5$\pm$0.1 & 0.33$\pm$0.09 & 0.34$\pm$0.08 \\
+0.980~ms, 140 & 2,380 & 953$\pm$6 & 9.8$\pm$0.1 & 9.6$\pm$0.3 & 0.19$\pm$0.07 & 0.25$\pm$0.06 \\
+2.08~ms, 140 & 1,120 & 453$\pm$3 & 20.5$\pm$0.1 & 19.1$\pm$1.0 & 0.24$\pm$0.13 & 0.35$\pm$0.19 \\
+5.56~ms, 140 & 420 & 172$\pm$2 & 54.1$\pm$0.6 & 46.5$\pm$2.9 & 0.89$\pm$0.42 & 0.85$\pm$0.00 \\
+8.33~ms, 140 & 280 & 115$\pm$1 & 81.0$\pm$0.7 & 65.6$\pm$5.4 & 0.58$\pm$0.04 & 0.96$\pm$0.05 \\
+2.08~ms, 70 & 560 & 225$\pm$2 & 41.3$\pm$0.4 & 36.4$\pm$0.6 & 0.41$\pm$0.08 & 0.31$\pm$0.04 \\
+2.08~ms, 35 & 280 & 118$\pm$3 & 79.1$\pm$1.8 & 64.9$\pm$6.6 & 1.20$\pm$0.73 & 0.78$\pm$0.00 \\
+2.08~ms, 20 & 160 & 68.3$\pm$0.7 & 136$\pm$1 & 93.0$\pm$1.6 & 0.87$\pm$0.17 & 0.89$\pm$0.08 \\
+2.08~ms, 10 & 80 & 35.4$\pm$0.3 & 262$\pm$2 & 169.5$\pm$7.9 & 1.10$\pm$0.49 & 1.10$\pm$0.23 \\
+5.56~ms, 35 & 105 & 44.6$\pm$0.3 & 208$\pm$1 & 151.7$\pm$4.0 & 0.85$\pm$0.10 & 1.05$\pm$0.12 \\
+8.33~ms, 35 (chosen) & 70 & 30.4$\pm$0.2 & 306$\pm$2 & 203.0$\pm$2.6 & 0.76$\pm$0.09 & 1.03$\pm$0.00 \\
+\hline
+\end{tabular}
+\end{table*}
