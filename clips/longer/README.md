@@ -27,7 +27,4 @@ interpolated. ⚠️ Neither row is real time; each row prints its measured spee
 - These are illustration runs. The paper's quantitative results come from the five-run repeats.
 - The B-mode uses the simulator's default acoustic materials and has not been compared with clinical images.
 
-**Reproducing.** Composer: `~/i4h-phantom/analysis/make_comparison_video.py --clock compute`, called by
-`~/i4h-phantom/run_scripts/clips_compose_computer_time_20261105.sh`. ⚠️ The saved frames were deleted on 2026-11-05
-after review, so the clips cannot be re-composed without re-running the simulation. The per-frame timing records
-(`legV5_cmp_*.json`, `.frames.csv`, `.log` in `~/i4h-phantom/out/live_bmode/`) are kept.
+⚠️ The saved frames were deleted on 2026-11-05 after review. These clips cannot be re-composed without re-running the simulation.

@@ -10,6 +10,4 @@ then the seven-depth press (3, 7, 11, 15, 19, 23, 25.4 mm). Left: Isaac Sim view
 | `legV5_s2_i35_cutsup_plain_asrun_14fps.mp4` | cut-away view, element colours | 14 frames/s | illustration run; slower because of the cut-away rendering; speed not quoted |
 | `legV5_s2_i35_cuttex_plain_asrun_13fps.mp4` | cut-away view, smooth tissue colours (the paper's Fig. 2 frame is frame 408 of this run) | 13 frames/s, 75.6 ms median | illustration run; speed not quoted |
 
-The run files, per-frame readings and the composer script are described in `../../appendix/video_2026-10-21_v5/README.md` and
-`../../appendix/video_2026-10-21_v5_cutview/README.md`. The paper's quantitative results come from the five-run repeats, not from
-these single picture runs.
+The paper's quantitative results come from the five-run repeats, not from these single picture runs.

@@ -10,8 +10,8 @@ __pycache__/
 *.out
 *.synctex.gz
 *.toc
-# the uploaded working package and other archives: kept locally in archive/, not versioned
-archive/*.zip
+# the uploaded working package and other archives: not in the public repository (2026-11-08, by direction)
+archive/
 # raw frame caches
 appendix/**/raw_frames/
 
@@ -34,12 +34,10 @@ figures/*
 !figures/fig_cast_segmentation_clean_wide.*
 !figures/fig_cast_validation.*
 !figures/fig_causal_chain.*
-!figures/fig_leg_settings_gap.*
 !figures/fig_leg_vein_vs_artery.*
 !figures/fig_meshF_wallclock_per_frame_top_panel.*
 !figures/fig_meshF_wallclock_residual.*
-!figures/fig_pipeline_press_19mm_clean.*
-!figures/fig_sim_vs_real_clean.*
+!figures/fig_sim_vs_real.*
 !figures/fig_slab_and_sweep.*
 !figures/fig_slab_element_size.*
 !figures/fig_slab_timestep_collapse.*
@@ -50,9 +48,19 @@ figures/*.pdf
 # packaged Overleaf uploads, built by scripts/make_overleaf_zip.sh
 /*.zip
 
-# paper sources and PDFs live in Overleaf, not in the public repository (2026-11-05, by direction)
-/main_V5.tex
-/supplement.tex
+# the public repository carries the paper and supplement as PDF only, no LaTeX (2026-11-08, by direction)
+*.tex
+*.bib
+*.cls
 /*.pdf
+!/main_V5.pdf
+!/supplement.pdf
+# earlier paper versions: kept locally, not public
+paper/
 # analysis and figure scripts: they read the private simulation repository, so they stay local (2026-11-05, by direction)
 /scripts/
+
+# the public repository is the PDFs, their figures and the videos only: no code, no data (2026-11-08, by direction)
+appendix/
+data/
+tables/

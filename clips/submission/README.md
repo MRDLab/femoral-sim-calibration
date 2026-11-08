@@ -64,16 +64,3 @@ the number shown here.
 
 - One run per setting, for illustration. The paper's quantitative results come from the five-run repeats.
 - The B-mode uses the simulator's default acoustic materials and has not been compared with clinical images.
-
-## Reproducing
-
-```
-cd ~/i4h-phantom
-/home/amit/i4h-anatomy/.venv/bin/python analysis/make_submission_video.py \
-  ~/femoral-sim-calibration/clips/intermediate/comparison/final_vs_intermediate_cutsup.mp4 \
-  out/live_bmode/legV5_cmp_s2_i35_cutsup.json out/live_bmode/legV5_cmp_s3_i140_cutsup.json \
-  ~/femoral-sim-calibration/clips/submission/submission_cutaway_element_colours.mp4 \
-  --view "cut-away view, element colours" --cap-s 180 --cap-mb 10
-```
-
-For smooth colours, use `cuttex` in place of `cutsup` and `--view "cut-away view, smooth tissue colours"`.
