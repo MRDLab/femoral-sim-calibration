@@ -1,0 +1,194 @@
+{
+ "kind": "graded_leg",
+ "date": "2026-09-09",
+ "built": "2026-10-21 13:07",
+ "fine_dx_m": 0.0015,
+ "coarse_dx_m": 0.03,
+ "grade_m": 0.025,
+ "arc_deg": 45.0,
+ "s_window_mm": [
+  0.0,
+  30.0
+ ],
+ "fine_depth_m": 0.030137029740986074,
+ "r_in_m": 0.062324994391961264,
+ "leg_s_range_mm": [
+  0.0,
+  81.0
+ ],
+ "leg_y_m": [
+  -0.061,
+  0.02
+ ],
+ "r_skin_m": 0.09246202413294734,
+ "z_skin": 0.09246202413294734,
+ "x_probe": 0.0,
+ "station_s": 20.0,
+ "z_station_lps_mm": 0.0,
+ "section": "/home/amit/i4h-phantom/out/femoral_v5/section_s020.json",
+ "sheath_kpa": 20.0,
+ "perivascular": true,
+ "body_s_ranges_mm": {
+  "Artery": [
+   0.0,
+   37.5
+  ],
+  "BloodArtery": [
+   0.0,
+   37.5
+  ],
+  "Vein": [
+   0.0,
+   80.0
+  ],
+  "BloodVein": [
+   0.0,
+   80.0
+  ],
+  "Nerve": [
+   0.0,
+   25.0
+  ],
+  "Sheath": [
+   0.0,
+   35.0
+  ],
+  "Perivascular": [
+   0.3000000000000007,
+   34.7
+  ],
+  "FemoralCanal": [
+   0.0,
+   12.5
+  ],
+  "PubicRamus": null,
+  "Femur": [
+   -58.051331000000005,
+   81.0
+  ],
+  "Muscle": [
+   0.0,
+   81.0
+  ],
+  "SoftTissue": [
+   0.0,
+   81.0
+  ]
+ },
+ "table_cap_m": 0.006,
+ "bone_dx_m": 0.005,
+ "ramus_dx_m": 0.0025,
+ "bone_margin_m": 0.004,
+ "n_nodes": 23688,
+ "n_tets": 129783,
+ "n_pinned": 352,
+ "n_bone_pinned": 342,
+ "n_table_pinned": 10,
+ "checks": {
+  "skin: max node radius within one fine element of the section skin radius": [
+   true,
+   {
+    "r_nodes_mm": 92.46202413294735,
+    "r_skin_mm": 92.46202413294733
+   }
+  ],
+  "artery void centroid at the station within 1 mm of the section disc centre": [
+   true,
+   {
+    "void_mm": [
+     1.22,
+     69.52
+    ],
+    "disc_mm": [
+     1.21,
+     69.5
+    ],
+    "dev_mm": 0.019
+   }
+  ],
+  "vein void centroid at the station within 1 mm of the section disc centre": [
+   true,
+   {
+    "void_mm": [
+     11.18,
+     68.89
+    ],
+    "disc_mm": [
+     11.21,
+     68.8
+    ],
+    "dev_mm": 0.096
+   }
+  ],
+  "lateral order: artery x < vein x (right thigh)": [
+   "True",
+   {
+    "artery_x_mm": 1.1805336568796423,
+    "vein_x_mm": 11.187463612875284
+   }
+  ],
+  "body fractions in the fine sector at the station within 5 points of the classifier's 2-D areas": [
+   true,
+   {
+    "BloodArtery": {
+     "area_2d": 0.0101,
+     "mesh": 0.0103
+    },
+    "BloodVein": {
+     "area_2d": 0.0208,
+     "mesh": 0.0212
+    },
+    "Artery": {
+     "area_2d": 0.0071,
+     "mesh": 0.0074
+    },
+    "Vein": {
+     "area_2d": 0.0044,
+     "mesh": 0.0032
+    },
+    "Nerve": {
+     "area_2d": 0.0072,
+     "mesh": 0.0075
+    },
+    "Perivascular": {
+     "area_2d": 0.0511,
+     "mesh": 0.0564
+    },
+    "Sheath": {
+     "area_2d": 0.0118,
+     "mesh": 0.0065
+    },
+    "Muscle": {
+     "area_2d": 0.3182,
+     "mesh": 0.3198
+    },
+    "SoftTissue": {
+     "area_2d": 0.5694,
+     "mesh": 0.5677
+    }
+   }
+  ],
+  "Femur is meshed as a pinned backstop (>= 50 tets, all its nodes pinned)": [
+   true,
+   {
+    "tets": 1094,
+    "pinned_nodes": 342,
+    "nodes": 342
+   }
+  ],
+  "PubicRamus is absent from the section, so it has no tets": [
+   true,
+   {
+    "tets": 0
+   }
+  ],
+  "no inverted tets at rest": [
+   true,
+   {
+    "min_vol_mm3": 0.22711790403230078,
+    "max_vol_mm3": 9981.07075312202
+   }
+  ]
+ },
+ "approximation": "cross-section shape = s=20 mm section extruded along s; body presence by CAD s-range; lumens void; bone pinned; ends free"
+}

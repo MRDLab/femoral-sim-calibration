@@ -1,0 +1,240 @@
+{
+ "source": "/home/amit/i4h-phantom/out/femoral_v4_gap12",
+ "source_conversion": {
+  "source": "/home/amit/i4h-reports/Phantoms/Femoral/FemoralV4/STLs",
+  "frame": "LPS = (V4.x, -V4.z, -V4.y)",
+  "ramus_gap_mm": 12.0,
+  "ramus_scale_s": 4.0,
+  "ramus_move_mm": [
+   57.937957763671875,
+   49.51904296875,
+   32.00503794926294
+  ],
+  "witnesses_pre": {
+   "cfv_dia": 10.989990234375,
+   "cfa_dia": 8.991943359375,
+   "cfv_near_depth": 18.2000732421875,
+   "cfv_far_depth": 29.2000732421875,
+   "cfa_cfv_separation": 10.0,
+   "s_len": 120.0
+  },
+  "witnesses_post": {
+   "cfv_dia": 10.989990234375,
+   "cfa_dia": 8.991943359375,
+   "cfv_near_depth": 18.2000732421875,
+   "cfa_cfv_separation": 10.0,
+   "s_len": 120.0
+  },
+  "s_cfa": [
+   0.0,
+   37.5
+  ],
+  "s_cfv": [
+   0.0,
+   80.0
+  ],
+  "s_ramus": [
+   -7.579833984375,
+   47.579833984375
+  ],
+  "axial_shift_mm": 1031.6732177734375,
+  "ligament_lps_z_mm": 20.0,
+  "image_plane_s_mm": 20.0,
+  "station_s_mm": 6.0,
+  "lateral_recentre_mm": [
+   1074.7872924804688,
+   1098.5413513183594
+  ]
+ },
+ "leg_length_mm": 81.0,
+ "cut_lps_z_mm": -61.0,
+ "removed": [
+  "PubicRamus"
+ ],
+ "clipped": {
+  "Femur": {
+   "method": "sliced and capped",
+   "v4_sha256_12": "cd32a5e82554",
+   "v4_volume_mm3": 131513.2352247097,
+   "v5_volume_mm3": 114814.18168144046,
+   "volume_ratio": 0.8730237795858611,
+   "s_span_mm": [
+    -58.051330570000005,
+    81.0
+   ],
+   "watertight": false,
+   "open_edges_v4": 4,
+   "open_edges_v5": 4,
+   "max_dev_of_kept_v4_vertices_mm": 0.0,
+   "v4_vertices_above_cut": 1512
+  },
+  "Gel": {
+   "method": "end ring moved",
+   "v4_sha256_12": "83799207ee61",
+   "v4_volume_mm3": 248722.36314306688,
+   "v5_volume_mm3": 167887.5951215705,
+   "volume_ratio": 0.6750000000000015,
+   "s_span_mm": [
+    0.0,
+    81.0
+   ],
+   "watertight": true,
+   "open_edges_v4": 0,
+   "open_edges_v5": 0,
+   "max_dev_of_kept_v4_vertices_mm": 0.0,
+   "v4_vertices_above_cut": 360,
+   "expected_ratio_prismatic": 0.675
+  },
+  "Muscle": {
+   "method": "end ring moved",
+   "v4_sha256_12": "9e8b78edcf1b",
+   "v4_volume_mm3": 2205793.565841382,
+   "v5_volume_mm3": 1488910.6569429326,
+   "volume_ratio": 0.6749999999999999,
+   "s_span_mm": [
+    0.0,
+    81.0
+   ],
+   "watertight": true,
+   "open_edges_v4": 0,
+   "open_edges_v5": 0,
+   "max_dev_of_kept_v4_vertices_mm": 0.0,
+   "v4_vertices_above_cut": 181,
+   "expected_ratio_prismatic": 0.675
+  },
+  "SoftTissue": {
+   "method": "end ring moved",
+   "v4_sha256_12": "0cc74c9ce086",
+   "v4_volume_mm3": 1018243.4453517928,
+   "v5_volume_mm3": 687314.3256124599,
+   "volume_ratio": 0.6749999999999997,
+   "s_span_mm": [
+    0.0,
+    81.0
+   ],
+   "watertight": true,
+   "open_edges_v4": 0,
+   "open_edges_v5": 0,
+   "max_dev_of_kept_v4_vertices_mm": 0.0,
+   "v4_vertices_above_cut": 111,
+   "expected_ratio_prismatic": 0.675
+  }
+ },
+ "copied": {
+  "Artery": {
+   "sha256_12": "770f8d20b6f6",
+   "s_span_mm": [
+    0.0,
+    37.5
+   ]
+  },
+  "BloodArtery": {
+   "sha256_12": "c63e1e8f5b83",
+   "s_span_mm": [
+    0.0,
+    37.5
+   ]
+  },
+  "BloodVein": {
+   "sha256_12": "655bf576f670",
+   "s_span_mm": [
+    0.0,
+    80.0
+   ]
+  },
+  "FemoralCanal": {
+   "sha256_12": "8e0521a7b840",
+   "s_span_mm": [
+    0.0,
+    12.5
+   ]
+  },
+  "Nerve": {
+   "sha256_12": "51ce1a5e0e14",
+   "s_span_mm": [
+    0.0,
+    25.0
+   ]
+  },
+  "Perivascular": {
+   "sha256_12": "3f0f751384d2",
+   "s_span_mm": [
+    0.3000000000000007,
+    34.7
+   ]
+  },
+  "Sheath": {
+   "sha256_12": "a2cc19304ea4",
+   "s_span_mm": [
+    0.0,
+    35.0
+   ]
+  },
+  "Vein": {
+   "sha256_12": "f02127593815",
+   "s_span_mm": [
+    0.0,
+    80.0
+   ]
+  }
+ },
+ "date": "2026-10-21",
+ "changes": [
+  "pubic ramus removed",
+  "inferior end cut so skin and muscle span s = 0..81 mm"
+ ],
+ "sections": {
+  "section_s006.json": {
+   "v4_sha256_12": "e812be8db85b",
+   "bodies": [
+    "Artery",
+    "BloodArtery",
+    "BloodVein",
+    "FemoralCanal",
+    "Femur",
+    "Muscle",
+    "Nerve",
+    "Sheath",
+    "SoftTissue",
+    "Vein"
+   ],
+   "fresh_v5_section_max_dev_mm": {
+    "BloodArtery": 0.0,
+    "Artery": 0.0,
+    "BloodVein": 0.0,
+    "Vein": 0.0,
+    "Nerve": 0.0,
+    "FemoralCanal": 0.0,
+    "Femur": 0.0,
+    "Sheath": 0.0,
+    "Muscle": 0.0004899798035779002,
+    "SoftTissue": 0.0057664281635227965
+   }
+  },
+  "section_s020.json": {
+   "v4_sha256_12": "30cfd1457d05",
+   "bodies": [
+    "Artery",
+    "BloodArtery",
+    "BloodVein",
+    "Femur",
+    "Muscle",
+    "Nerve",
+    "Sheath",
+    "SoftTissue",
+    "Vein"
+   ],
+   "fresh_v5_section_max_dev_mm": {
+    "BloodArtery": 0.0,
+    "Artery": 0.0,
+    "BloodVein": 0.0,
+    "Vein": 0.0,
+    "Nerve": 0.0,
+    "Femur": 0.000524751216394656,
+    "Sheath": 0.0,
+    "Muscle": 0.001093510472754966,
+    "SoftTissue": 0.012871438812761538
+   }
+  }
+ }
+}

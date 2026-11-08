@@ -1,0 +1,484 @@
+diff --git a/ultrasound-raytracing/csrc/core/hitable.cpp b/ultrasound-raytracing/csrc/core/hitable.cpp
+index 5faba81..86918cf 100644
+--- a/ultrasound-raytracing/csrc/core/hitable.cpp
++++ b/ultrasound-raytracing/csrc/core/hitable.cpp
+@@ -133,6 +133,7 @@ void Mesh::build(OptixBuildInput* optix_build_input, HitGroupData* hit_group_dat
+   cuda_vertex_buffer_ =
+       std::make_unique<CudaMemory>(mesh->mNumVertices * sizeof(aiVector3D), stream);
+   cuda_vertex_buffer_->upload(mesh->mVertices, stream);
++  num_vertices_ = mesh->mNumVertices;
+ 
+   vertex_buffers_.push_back(cuda_vertex_buffer_->get_device_ptr(stream));
+   optix_build_input->triangleArray.vertexBuffers = vertex_buffers_.data();
+@@ -175,4 +176,90 @@ void Mesh::build(OptixBuildInput* optix_build_input, HitGroupData* hit_group_dat
+   hit_group_data->material_id = material_id_;
+ }
+ 
++static const aiMesh* assimp_mesh_of(const std::shared_ptr<Assimp::Importer>& importer) {
++  auto scene = importer->GetScene();
++  return scene->mMeshes[scene->mRootNode->mChildren[0]->mMeshes[0]];
++}
++
++std::vector<float> Mesh::get_vertices() const {
++  auto mesh = assimp_mesh_of(importer_);
++  std::vector<float> out(mesh->mNumVertices * 3);
++  for (unsigned int i = 0; i < mesh->mNumVertices; ++i) {
++    out[i * 3 + 0] = mesh->mVertices[i].x;
++    out[i * 3 + 1] = mesh->mVertices[i].y;
++    out[i * 3 + 2] = mesh->mVertices[i].z;
++  }
++  return out;
++}
++
++std::vector<float> Mesh::get_normals() const {
++  auto mesh = assimp_mesh_of(importer_);
++  std::vector<float> out(mesh->mNumVertices * 3);
++  for (unsigned int i = 0; i < mesh->mNumVertices; ++i) {
++    out[i * 3 + 0] = mesh->mNormals[i].x;
++    out[i * 3 + 1] = mesh->mNormals[i].y;
++    out[i * 3 + 2] = mesh->mNormals[i].z;
++  }
++  return out;
++}
++
++std::vector<uint32_t> Mesh::get_indices() const {
++  auto mesh = assimp_mesh_of(importer_);
++  std::vector<uint32_t> out(mesh->mNumFaces * 3);
++  for (unsigned int f = 0; f < mesh->mNumFaces; ++f) {
++    out[f * 3 + 0] = mesh->mFaces[f].mIndices[0];
++    out[f * 3 + 1] = mesh->mFaces[f].mIndices[1];
++    out[f * 3 + 2] = mesh->mFaces[f].mIndices[2];
++  }
++  return out;
++}
++
++void Mesh::set_vertices(const float* vertices, size_t num_vertices, cudaStream_t stream) {
++  if (!cuda_vertex_buffer_) {
++    throw std::runtime_error("Mesh::set_vertices: build() has not run yet (add the mesh to a World "
++                             "and create the simulator first)");
++  }
++  if (num_vertices != num_vertices_) {
++    throw std::runtime_error(fmt::format(
++        "Mesh::set_vertices: vertex count {} does not match the mesh's {}", num_vertices,
++        num_vertices_));
++  }
++  cuda_vertex_buffer_->upload(vertices, stream);
++  // the caller's host buffer may be freed on return: finish the copy before returning
++  CUDA_CHECK(cudaStreamSynchronize(stream));
++}
++
++void Mesh::set_vertices_device(const void* d_vertices, size_t num_vertices, cudaStream_t stream) {
++  if (!cuda_vertex_buffer_) { throw std::runtime_error("Mesh::set_vertices_device: build() has not run yet"); }
++  if (num_vertices != num_vertices_) {
++    throw std::runtime_error(fmt::format("Mesh::set_vertices_device: vertex count {} does not match the mesh's {}",
++                                         num_vertices, num_vertices_));
++  }
++  CUDA_CHECK(cudaMemcpyAsync(cuda_vertex_buffer_->get_ptr(stream), d_vertices, num_vertices * 3 * sizeof(float),
++                             cudaMemcpyDeviceToDevice, stream));
++  CUDA_CHECK(cudaStreamSynchronize(stream));
++}
++
++void Mesh::set_normals_device(const void* d_normals, size_t num_vertices, cudaStream_t stream) {
++  if (!cuda_normal_buffer_) { throw std::runtime_error("Mesh::set_normals_device: build() has not run yet"); }
++  if (num_vertices != num_vertices_) {
++    throw std::runtime_error(fmt::format("Mesh::set_normals_device: vertex count {} does not match the mesh's {}",
++                                         num_vertices, num_vertices_));
++  }
++  CUDA_CHECK(cudaMemcpyAsync(cuda_normal_buffer_->get_ptr(stream), d_normals, num_vertices * 3 * sizeof(float),
++                             cudaMemcpyDeviceToDevice, stream));
++  CUDA_CHECK(cudaStreamSynchronize(stream));
++}
++
++void Mesh::set_normals(const float* normals, size_t num_vertices, cudaStream_t stream) {
++  if (!cuda_normal_buffer_) { throw std::runtime_error("Mesh::set_normals: build() has not run yet"); }
++  if (num_vertices != num_vertices_) {
++    throw std::runtime_error(fmt::format(
++        "Mesh::set_normals: vertex count {} does not match the mesh's {}", num_vertices,
++        num_vertices_));
++  }
++  cuda_normal_buffer_->upload(normals, stream);
++  CUDA_CHECK(cudaStreamSynchronize(stream));
++}
++
+ }  // namespace raysim
+diff --git a/ultrasound-raytracing/csrc/core/material.cpp b/ultrasound-raytracing/csrc/core/material.cpp
+index 2fd1f30..1ae5738 100644
+--- a/ultrasound-raytracing/csrc/core/material.cpp
++++ b/ultrasound-raytracing/csrc/core/material.cpp
+@@ -43,7 +43,32 @@ Materials::Materials() {
+                 {"fat", Material(1.38f, 0.63f, 1450.f, 1.f, 0.f, 1.f, 0.f)},
+                 {"liver", Material(1.65f, 0.7f, 1550.f, 0.7f, 0.f, 0.3f, 1e-5f)},
+                 {"muscle", Material(1.70f, 1.09f, 1580.f, 0.5f, 0.8f, 0.4f)},
+-                {"bone", Material(7.80f, 5.f, 4080.f, 0.8f, 0.9f, 0.5f)}};
++                {"bone", Material(7.80f, 5.f, 4080.f, 0.8f, 0.9f, 0.5f)},
++                // Air at 20 degC, 1 atm. Enables modelling of acoustic coupling loss: a
++                // tissue/air interface reflects ~99.9% of incident intensity
++                // (R = ((Z2-Z1)/(Z2+Z1))^2 = 0.999 for Z_tissue=1.63, Z_air=4.13e-4), which
++                // produces a bright surface echo and total shadowing beneath it. This is why
++                // coupling gel is required in real sonography.
++                //
++                // impedance      4.13e-4 MRayl = 413 Rayl (rho*c = 1.204 * 343).
++                // speed_of_sound 343 m/s at 20 degC.
++                // These two are chosen to be mutually consistent so that density() returns
++                // 413/343 = 1.204 kg/m^3, the textbook density of dry air at 20 degC.
++                //
++                // attenuation    8.2 dB/(cm*MHz). Air absorption really follows an f^2 law
++                // (1.64 dB/cm at 1 MHz, classical Stokes-Kirchhoff; the N2/O2 relaxation peaks
++                // are saturated above ~100 kHz). This simulator's model is linear in frequency
++                // (attenuation * f * cm), so no single coefficient is correct at all
++                // frequencies. 8.2 = 1.64 * 5.0 collapses the f^2 law onto the linear model so
++                // that it is exact at the 5 MHz default probe centre frequency, where real air
++                // absorbs ~40 dB/cm. This is a deliberate model fit, not a measured constant.
++                // (The commonly quoted "12 dB/(cm*MHz)" for air is the same collapse done at
++                // ~7.3 MHz.) The exact value barely matters: the ~99.9% interface reflection
++                // removes the energy before absorption can act.
++                //
++                // No scattering (mu0/mu1/sigma = 0): air is acoustically homogeneous and
++                // produces no speckle. specularity = 1.
++                {"air", Material(4.13e-4f, 8.2f, 343.f, 0.f, 0.f, 0.f, 1.f)}};
+ 
+   // Upload materials to device
+   std::vector<Material> material_data;
+diff --git a/ultrasound-raytracing/csrc/core/raytracing_ultrasound_simulator.cpp b/ultrasound-raytracing/csrc/core/raytracing_ultrasound_simulator.cpp
+index f7d9b6b..fce8dba 100644
+--- a/ultrasound-raytracing/csrc/core/raytracing_ultrasound_simulator.cpp
++++ b/ultrasound-raytracing/csrc/core/raytracing_ultrasound_simulator.cpp
+@@ -207,6 +207,12 @@ RaytracingUltrasoundSimulator::RaytracingUltrasoundSimulator(World* world,
+   cuda_algorithms_ = std::make_shared<CUDAAlgorithms>();
+ }
+ 
++void RaytracingUltrasoundSimulator::rebuild_geometry() {
++  const cudaStream_t stream = cudaStreamPerThread;
++  world_->rebuild(context_.get(), stream);
++  CUDA_CHECK(cudaStreamSynchronize(stream));
++}
++
+ void RaytracingUltrasoundSimulator::update_psfs(const BaseProbe* probe, cudaStream_t stream) {
+   if (probe_frequency_ != probe->get_frequency()) {
+     probe_frequency_ = probe->get_frequency();
+@@ -285,6 +291,12 @@ RaytracingUltrasoundSimulator::SimResult RaytracingUltrasoundSimulator::simulate
+     params.materials =
+         reinterpret_cast<Material*>(materials_->get_material_data()->get_ptr(sim_params.stream));
+     params.background_material_id = materials_->get_index(world_->get_background_material());
++    // Rays spawn in `initial_material` when the caller set one, else in the background.
++    // get_index() throws on an unknown name, so a typo fails loudly rather than silently
++    // falling back to the background.
++    params.initial_material_id = sim_params.initial_material.empty()
++                                     ? params.background_material_id
++                                     : materials_->get_index(sim_params.initial_material);
+     params.scattering_texture = world_->get_scattering_texture();
+     params.handle = world_->get_gas_handle();
+     params.source_frequency = probe->get_frequency();
+diff --git a/ultrasound-raytracing/csrc/core/world.cpp b/ultrasound-raytracing/csrc/core/world.cpp
+index 8662217..7ab580b 100644
+--- a/ultrasound-raytracing/csrc/core/world.cpp
++++ b/ultrasound-raytracing/csrc/core/world.cpp
+@@ -80,6 +80,11 @@ void World::build(OptixDeviceContext context, cudaStream_t stream) {
+   optix_build_gas(context, build_input_, &gas_handle_, &d_gas_output_buffer_, stream);
+ }
+ 
++void World::rebuild(OptixDeviceContext context, cudaStream_t stream) {
++  if (build_input_.empty()) { throw std::runtime_error("World::rebuild: build() has not run yet"); }
++  optix_build_gas(context, build_input_, &gas_handle_, &d_gas_output_buffer_, stream);
++}
++
+ OptixTraversableHandle World::get_gas_handle() const {
+   return gas_handle_;
+ }
+diff --git a/ultrasound-raytracing/csrc/cuda/optix_trace.cu b/ultrasound-raytracing/csrc/cuda/optix_trace.cu
+index 7f4c14f..a33a9a7 100644
+--- a/ultrasound-raytracing/csrc/cuda/optix_trace.cu
++++ b/ultrasound-raytracing/csrc/cuda/optix_trace.cu
+@@ -345,7 +345,10 @@ extern "C" __global__ void __raygen__rg() {
+   Payload ray{};
+   ray.intensity = 1.f;
+   ray.depth = 0;
+-  ray.current_material_id = params.background_material_id;
++  // Rays start in the initial material, which is the world background unless the caller
++  // overrode it (SimParams::initial_material). There is no point-in-mesh test here, so with
++  // an "air" background this override is what allows a coupled probe to image.
++  ray.current_material_id = params.initial_material_id;
+   ray.outter_material_id = 0;
+   ray.current_obj_id = static_cast<uint16_t>(-1);
+   ray.outter_obj_id = static_cast<uint16_t>(-1);
+diff --git a/ultrasound-raytracing/csrc/python/raysim_bindings.cpp b/ultrasound-raytracing/csrc/python/raysim_bindings.cpp
+index 1b46cb7..c2f6844 100644
+--- a/ultrasound-raytracing/csrc/python/raysim_bindings.cpp
++++ b/ultrasound-raytracing/csrc/python/raysim_bindings.cpp
+@@ -16,6 +16,8 @@
+  */
+ 
+ #include <pybind11/numpy.h>
++#include <cstdint>
++#include <cstring>
+ #include <pybind11/pybind11.h>
+ #include <pybind11/stl.h>
+ #include <iostream>
+@@ -165,13 +167,15 @@ PYBIND11_MODULE(ray_sim_python, m) {
+             - liver
+             - bone
+             - blood
++            - air (for modelling acoustic coupling loss / air gaps)
+     )pbdoc")
+       .def(py::init<>())
+       .def("get_index", &raysim::Materials::get_index, R"pbdoc(
+         Get the index of a predefined material.
+ 
+         Args:
+-            name (str): Material name (e.g., "water", "fat", "muscle", "liver", "bone", "blood")
++            name (str): Material name (e.g., "water", "fat", "muscle", "liver", "bone",
++                "blood", "air")
+ 
+         Returns:
+             int: Material index for use in World objects
+@@ -184,6 +188,14 @@ PYBIND11_MODULE(ray_sim_python, m) {
+         Contains meshes and their material properties. The world has a background
+         material (typically "water") and can contain multiple objects with different
+         materials.
++
++        Note: rays are always spawned in the background material. There is no
++        point-in-mesh test at ray generation, so a probe positioned geometrically
++        inside a mesh still emits rays that begin in the background medium until
++        their first surface intersection. This matters when using "air" as the
++        background: the probe must be coupled to the tissue by geometry that the
++        ray actually intersects, otherwise the initial in-air path length will
++        attenuate the beam away.
+     )pbdoc")
+       .def(py::init([](const std::string& background_material) {
+              spdlog::info("Creating World with background material: {}", background_material);
+@@ -411,6 +423,23 @@ Elements steer beams electronically to create a sector image from a small footpr
+       .def_readwrite("contact_epsilon",
+                      &raysim::RaytracingUltrasoundSimulator::SimParams::contact_epsilon,
+                      "Maximum distance for element activation [mm]")
++      .def_readwrite("initial_material",
++                     &raysim::RaytracingUltrasoundSimulator::SimParams::initial_material,
++                     R"pbdoc(
++Name of the material rays are spawned in, overriding the world background.
++
++Empty (default) means use the world background material, i.e. unchanged behaviour.
++
++Rays are spawned in the background material with no point-in-mesh test, so with a
++World("air") background the beam attenuates away before its first hit at every probe
++position, even one inside the tissue. Set this to the coupling medium (e.g. "water")
++while the probe is in contact, and leave it empty when it is not, to get both a blank
++image off-contact and anatomy on-contact from a single air world.
++
++Interim model: coupling is an input rather than a consequence of the geometry, so a
++caller can assert contact that does not exist. The successor is a point-in-mesh
++containment query at ray generation.
++                     )pbdoc")
+       .def_property(
+           "b_mode_size",
+           [](raysim::RaytracingUltrasoundSimulator::SimParams& self) {
+@@ -493,6 +522,11 @@ Elements steer beams electronically to create a sector image from a small footpr
+             world: World instance containing the scene geometry
+             materials: Materials instance with material definitions
+       )pbdoc")
++      .def("rebuild_geometry", &raysim::RaytracingUltrasoundSimulator::rebuild_geometry,
++           R"pbdoc(
++        Rebuild the acceleration structure after Mesh.set_vertices() calls. Added 2026-09-09.
++        A full OptiX build over the existing buffers, not a refit.
++      )pbdoc")
+       .def("get_min_x",
+            &raysim::RaytracingUltrasoundSimulator::get_min_x,
+            "Get the minimum x value of the simulated region [mm]")
+@@ -586,7 +620,77 @@ Elements steer beams electronically to create a sector image from a small footpr
+         Args:
+             file_name (str): Path to OBJ file
+             material_id (int): Material index from Materials.get_index()
+-      )pbdoc");
++      )pbdoc")
++      .def(
++          "set_vertices",
++          [](raysim::Mesh& self, py::array_t<float, py::array::c_style | py::array::forcecast> v) {
++            auto buf = v.request();
++            if (buf.ndim != 2 || buf.shape[1] != 3) {
++              throw std::runtime_error("set_vertices: expected an (n, 3) float32 array");
++            }
++            self.set_vertices(static_cast<const float*>(buf.ptr),
++                              static_cast<size_t>(buf.shape[0]), cudaStreamPerThread);
++          },
++          py::arg("vertices"),
++          R"pbdoc(
++        Overwrite this mesh's vertex positions in place (same count and order as the OBJ).
++        Call RaytracingUltrasoundSimulator.rebuild_geometry() afterwards. Added 2026-09-09.
++      )pbdoc")
++      .def(
++          "set_normals",
++          [](raysim::Mesh& self, py::array_t<float, py::array::c_style | py::array::forcecast> n) {
++            auto buf = n.request();
++            if (buf.ndim != 2 || buf.shape[1] != 3) {
++              throw std::runtime_error("set_normals: expected an (n, 3) float32 array");
++            }
++            self.set_normals(static_cast<const float*>(buf.ptr),
++                             static_cast<size_t>(buf.shape[0]), cudaStreamPerThread);
++          },
++          py::arg("normals"),
++          "Overwrite this mesh's per-vertex normals in place. Added 2026-09-09.")
++      .def(
++          "set_vertices_device",
++          [](raysim::Mesh& self, std::uintptr_t d_ptr, size_t num_vertices) {
++            self.set_vertices_device(reinterpret_cast<const void*>(d_ptr), num_vertices, cudaStreamPerThread);
++          },
++          py::arg("device_ptr"), py::arg("num_vertices"),
++          "Overwrite vertices from a DEVICE pointer to (n, 3) float32, e.g. cupy_array.data.ptr. Device->device copy only. Added 2026-09-09.")
++      .def(
++          "set_normals_device",
++          [](raysim::Mesh& self, std::uintptr_t d_ptr, size_t num_vertices) {
++            self.set_normals_device(reinterpret_cast<const void*>(d_ptr), num_vertices, cudaStreamPerThread);
++          },
++          py::arg("device_ptr"), py::arg("num_vertices"),
++          "Overwrite normals from a DEVICE pointer to (n, 3) float32. Added 2026-09-09.")
++      .def("num_vertices", &raysim::Mesh::num_vertices,
++           "Vertex count after build (0 before the simulator has been created).")
++      .def(
++          "get_vertices",
++          [](const raysim::Mesh& self) {
++            auto v = self.get_vertices();
++            py::array_t<float> a({static_cast<py::ssize_t>(v.size() / 3), static_cast<py::ssize_t>(3)});
++            std::memcpy(a.mutable_data(), v.data(), v.size() * sizeof(float));
++            return a;
++          },
++          "Assimp-ordered rest vertices (n, 3) float32: the order set_vertices() expects. Added 2026-09-09.")
++      .def(
++          "get_normals",
++          [](const raysim::Mesh& self) {
++            auto v = self.get_normals();
++            py::array_t<float> a({static_cast<py::ssize_t>(v.size() / 3), static_cast<py::ssize_t>(3)});
++            std::memcpy(a.mutable_data(), v.data(), v.size() * sizeof(float));
++            return a;
++          },
++          "Assimp-ordered rest normals (n, 3) float32. Added 2026-09-09.")
++      .def(
++          "get_indices",
++          [](const raysim::Mesh& self) {
++            auto v = self.get_indices();
++            py::array_t<uint32_t> a({static_cast<py::ssize_t>(v.size() / 3), static_cast<py::ssize_t>(3)});
++            std::memcpy(a.mutable_data(), v.data(), v.size() * sizeof(uint32_t));
++            return a;
++          },
++          "Triangle indices (m, 3) uint32 into get_vertices(). Added 2026-09-09.");
+ 
+   // Bind Sphere class
+   py::class_<raysim::Sphere, raysim::Hitable>(m, "Sphere", R"pbdoc(
+diff --git a/ultrasound-raytracing/include/raysim/core/hitable.hpp b/ultrasound-raytracing/include/raysim/core/hitable.hpp
+index f5f1db1..49d56c7 100644
+--- a/ultrasound-raytracing/include/raysim/core/hitable.hpp
++++ b/ultrasound-raytracing/include/raysim/core/hitable.hpp
+@@ -83,7 +83,25 @@ class Mesh : public Hitable {
+   void build(OptixBuildInput* optix_build_input, HitGroupData* hit_group_data,
+              cudaStream_t stream) override;
+ 
++  // 2026-09-09 (i4h-phantom live loop): overwrite the vertex (and optionally normal) buffers in
++  // place after build(). The device pointers do not change, so the OptixBuildInput and the SBT
++  // hit-group record stay valid; the caller must then rebuild the world's acceleration structure
++  // (World::rebuild / RaytracingUltrasoundSimulator::rebuild_geometry). Vertex count must match.
++  void set_vertices(const float* vertices, size_t num_vertices, cudaStream_t stream);
++  void set_normals(const float* normals, size_t num_vertices, cudaStream_t stream);
++  // Same, from DEVICE memory (e.g. a cupy array's data.ptr): one cudaMemcpy device->device, no host round trip.
++  void set_vertices_device(const void* d_vertices, size_t num_vertices, cudaStream_t stream);
++  void set_normals_device(const void* d_normals, size_t num_vertices, cudaStream_t stream);
++  size_t num_vertices() const { return num_vertices_; }
++  // Host copies of the Assimp-ordered geometry, so a caller can warp vertices in the SAME order
++  // set_vertices() expects. Assimp's OBJ importer creates its own vertex order (one vertex per
++  // face corner unless joined), so parsing the OBJ file is NOT equivalent.
++  std::vector<float> get_vertices() const;   // n*3, x y z
++  std::vector<float> get_normals() const;    // n*3
++  std::vector<uint32_t> get_indices() const; // m*3
++
+  private:
++  size_t num_vertices_ = 0;
+   std::shared_ptr<Assimp::Importer> importer_;
+ 
+   std::unique_ptr<CudaMemory> cuda_vertex_buffer_;
+diff --git a/ultrasound-raytracing/include/raysim/core/raytracing_ultrasound_simulator.hpp b/ultrasound-raytracing/include/raysim/core/raytracing_ultrasound_simulator.hpp
+index 447e550..0253f80 100644
+--- a/ultrasound-raytracing/include/raysim/core/raytracing_ultrasound_simulator.hpp
++++ b/ultrasound-raytracing/include/raysim/core/raytracing_ultrasound_simulator.hpp
+@@ -19,6 +19,7 @@
+ #define CPP_RAYTRACING_ULTRASOUND_SIMULATOR
+ 
+ #include <memory>
++#include <string>
+ 
+ #include "raysim/cuda/cuda_helper.hpp"
+ #include "raysim/cuda/optix_helper.hpp"
+@@ -55,6 +56,35 @@ class RaytracingUltrasoundSimulator {
+     bool enable_cuda_timing = false;            // Print timing of CUDA operations
+     bool write_debug_images = false;            // Write debug images to `debug_images` directory
+     float contact_epsilon = 0.0f;               // Maximum distance for element activation [mm]
++
++    /**
++     * Material the rays start in, overriding the world background material.
++     *
++     * Empty (default) = use the world background material, i.e. behaviour is unchanged.
++     *
++     * Rationale: rays are spawned in the background material with no point-in-mesh test at
++     * ray generation (see __raygen__rg). That is harmless with a tissue-matched background
++     * such as "water", but with background "air" the beam is attenuated away before its
++     * first surface intersection at *every* probe position, including one geometrically
++     * buried inside tissue. A world can therefore not currently be both "blank when the
++     * probe is off the skin" and "imaging when it is on the skin".
++     *
++     * Setting this to the coupling medium (e.g. "water") when the probe is known to be in
++     * contact, and leaving it unset when it is not, recovers both behaviours from a single
++     * air world. This is defensible because the caller genuinely knows the coupling state
++     * from physics rather than guesswork -- the robotic ultrasound env already computes the
++     * probe-to-phantom gap every simulation step (gap = ee_z - phantom_top; negative = the
++     * probe has pressed into the surface).
++     *
++     * It is nonetheless an interim model: coupling is an input to the simulator rather than
++     * a consequence of the geometry, so a caller can assert contact that does not exist. The
++     * principled successor is a point-in-mesh containment query at ray generation, which
++     * would make contact an emergent geometric fact and make this field unnecessary. That
++     * needs a second OptiX ray type (the SBT currently has a single miss record and one
++     * hitgroup record per object) plus a rule for nested containment priority, so it is a
++     * pipeline change rather than a parameter change.
++     */
++    std::string initial_material = "";
+   };
+ 
+   /// Simulation results
+@@ -73,6 +103,13 @@ class RaytracingUltrasoundSimulator {
+    */
+   SimResult simulate(const BaseProbe* probe, const SimParams& sim_params);
+ 
++  /**
++   * 2026-09-09: rebuild the world's acceleration structure after Mesh::set_vertices calls, so the
++   * next simulate() traces the updated geometry. simulate() reads world_->get_gas_handle() on
++   * every call, and the SBT's index/normal pointers are unchanged, so nothing else is touched.
++   */
++  void rebuild_geometry();
++
+   /**
+    * Get the minimum x value of the simulated region
+    *
+diff --git a/ultrasound-raytracing/include/raysim/core/world.hpp b/ultrasound-raytracing/include/raysim/core/world.hpp
+index 11eb4de..9adbc13 100644
+--- a/ultrasound-raytracing/include/raysim/core/world.hpp
++++ b/ultrasound-raytracing/include/raysim/core/world.hpp
+@@ -49,6 +49,10 @@ class World {
+    * @param stream
+    */
+   void build(OptixDeviceContext context, cudaStream_t stream);
++  // 2026-09-09: rebuild the acceleration structure over the SAME build inputs (vertex buffers
++  // overwritten in place by Mesh::set_vertices). A full build, not a refit: the flags carry no
++  // OPTIX_BUILD_FLAG_ALLOW_UPDATE. Requires build() to have run once.
++  void rebuild(OptixDeviceContext context, cudaStream_t stream);
+ 
+   OptixTraversableHandle get_gas_handle() const;
+ 
+diff --git a/ultrasound-raytracing/include/raysim/cuda/optix_trace.hpp b/ultrasound-raytracing/include/raysim/cuda/optix_trace.hpp
+index 515f6fe..97da8c6 100644
+--- a/ultrasound-raytracing/include/raysim/cuda/optix_trace.hpp
++++ b/ultrasound-raytracing/include/raysim/cuda/optix_trace.hpp
+@@ -34,6 +34,9 @@ struct Params {
+   uint32_t max_depth;
+   Material* materials;
+   uint32_t background_material_id;
++  /// Material rays are spawned in. Equals background_material_id unless the caller
++  /// overrode it via SimParams::initial_material (see the rationale there).
++  uint32_t initial_material_id;
+   cudaTextureObject_t scattering_texture;
+   OptixTraversableHandle handle;
+   float source_frequency;

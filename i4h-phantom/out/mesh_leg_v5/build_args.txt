@@ -1,0 +1,1 @@
+--station-s 20 --fine-dx-mm 1.5 --coarse-dx-mm 30 --grade-mm 25 --arc-deg 45 --s-window 0 30 --fine-depth-mm auto --perivascular --sheath-kpa 20 --table-cap-mm 6 --bone-dx-mm 5 --bone-margin-mm 4 --ramus-dx-mm 2.5 --nsub 11

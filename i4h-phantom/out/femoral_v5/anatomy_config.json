@@ -1,0 +1,122 @@
+{
+  "anatomy": {
+    "mesh_dir": "/home/amit/i4h-phantom/out/femoral_v5",
+    "background_material": "air",
+    "meshes": [
+      {
+        "file": "SoftTissue.obj",
+        "material": "fat"
+      },
+      {
+        "file": "Muscle.obj",
+        "material": "muscle"
+      },
+      {
+        "file": "Femur.obj",
+        "material": "bone"
+      },
+      {
+        "file": "Sheath.obj",
+        "material": "muscle"
+      },
+      {
+        "file": "Perivascular.obj",
+        "material": "fat"
+      },
+      {
+        "file": "FemoralCanal.obj",
+        "material": "fat"
+      },
+      {
+        "file": "Vein.obj",
+        "material": "muscle"
+      },
+      {
+        "file": "Artery.obj",
+        "material": "muscle"
+      },
+      {
+        "file": "BloodVein.obj",
+        "material": "blood"
+      },
+      {
+        "file": "BloodArtery.obj",
+        "material": "blood"
+      },
+      {
+        "file": "Nerve.obj",
+        "material": "fat"
+      },
+      {
+        "file": "Gel.obj",
+        "material": "water"
+      }
+    ]
+  },
+  "geometry": {
+    "r_skin_mm": 92.50007926176455,
+    "r_shell_inner_mm": 76.4999186104047,
+    "ligament_lps_z_mm": 20.0,
+    "image_plane_s_mm": 20.0,
+    "target_plane_s_mm": 20.0,
+    "targets": {
+      "artery": [
+        1.2033025796973682,
+        -69.4746897547259,
+        6.960355347516725
+      ],
+      "vein": [
+        11.174204935301043,
+        -68.80467542974338,
+        9.954446459908922
+      ],
+      "nerve": [
+        -11.832964080514259,
+        -76.19720085662546,
+        9.5972900390625
+      ]
+    },
+    "station_s_mm": 6.0
+  },
+  "_provenance": {
+    "source": "/home/amit/i4h-phantom/out/femoral_v4_gap12",
+    "frame": "LPS mm; LPS = (V4.x, -V4.z, -V4.y), recentred on the Leg_Shell bbox centre in x/y and shifted axially so the inguinal ligament plane sits at LPS z = +image_plane_s_mm (build_v3_anatomy.py's convention). See v4_to_section.py's docstring for the five witnesses that check the frame map and the assertion that checks the axial origin.",
+    "axial_shift_mm": 1031.6732177734375,
+    "synthesised_bodies": [
+      "Muscle",
+      "BloodArtery",
+      "BloodVein"
+    ],
+    "missing_bodies": [
+      "LooseTissue",
+      "Septum"
+    ],
+    "missing_reason": "no CAD body exists for either; same as V3, logged in CAD_CHANGELOG.md.",
+    "note_lumen_diameters": "\ud83d\udea8 The CAD treats CFA_dia/CFV_dia as the tube's OUTER diameter, so the LUMENS are smaller than the spec's intima-to-intima figures -- the same V3 defect, and the reason deform_meshes.EXPECTED_RADII must be derived from the section rather than typed from the spec.",
+    "muscle_status": "\ud83d\udd34 MODELLING CHOICE. V4 ships no Muscle body; the core is synthesised as the shell's inner cylinder.",
+    "body_order": "BODY_ORDER_V5",
+    "written_by": "materials.emit_anatomy_config",
+    "derived_by": "anatomy_meshing/v5_from_v4.py",
+    "v5_changes": [
+      "pubic ramus removed",
+      "inferior end cut so skin and muscle span s = 0..81 mm"
+    ],
+    "leg_length_mm": 81.0,
+    "cut_lps_z_mm": -61.0,
+    "cad_generation": "v5",
+    "gel": {
+      "r_in_mm": 92.52007926307915,
+      "r_out_mm": 96.02007926307915,
+      "thickness_mm": 3.5,
+      "eps_mm": 0.02,
+      "skin_r_mm": 92.50007926307916,
+      "material": "water",
+      "watertight": true,
+      "background_was": "air",
+      "background_now": "air",
+      "probe_standoff_mm": 2.0,
+      "gel_clearance_mm": 1.5,
+      "clipped_at_s_mm": 81.0
+    }
+  }
+}
