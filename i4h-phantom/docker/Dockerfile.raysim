@@ -1,0 +1,29 @@
+# The B-mode worker's container: NVIDIA's robotic-ultrasound image with one patch to its ray tracer (raysim).
+#
+#   docker build -f docker/Dockerfile.raysim --build-arg BASE=<stock image> -t i4h_raysim:femoral docker/
+#
+# BASE is the image `./i4h build-container robotic_ultrasound` builds from i4h-workflows (README.md, section 3).
+# raysim lives in that image at third_party/i4h-sensor-simulation (NVIDIA, Apache-2.0), commit de8fe6f.
+#
+# raysim_femoral.patch (10 files, +302/-4) adds:
+#   - an `air` material, so a probe that is not in contact images black (raysim's table had no air);
+#   - SimParams.initial_material, the medium rays start in (the gel, when the probe touches the skin);
+#   - Mesh.get_vertices/set_vertices(_device), set_normals(_device) and rebuild_geometry(): update a mesh in place,
+#     so the live loop re-traces a deformed anatomy without re-reading it from disk every frame.
+ARG BASE=i4h_build-robotic_ultrasound:main
+FROM ${BASE}
+SHELL ["/bin/bash", "-lc"]
+
+COPY raysim_femoral.patch /tmp/raysim_femoral.patch
+RUN set -euo pipefail \
+ && cd /workspace/i4h-workflows/third_party/i4h-sensor-simulation \
+ && [ "$(git rev-parse --short=7 HEAD)" = "de8fe6f" ] || { echo "raysim is not at de8fe6f; the patch was made against it"; exit 1; } \
+ && git apply --check /tmp/raysim_femoral.patch \
+ && git apply /tmp/raysim_femoral.patch \
+ && pip install --no-cache-dir ninja==1.13.0 \
+ && cd ultrasound-raytracing/build-release \
+ && ninja \
+ && python -c "import raysim.cuda as rs; assert hasattr(rs.Mesh, 'set_vertices_device'); print('raysim patched: in-place mesh updates present')"
+# The air material needs the GPU to check, which docker build does not have. After building:
+#   docker run --rm --gpus all --entrypoint bash i4h_raysim:femoral -lc \
+#     "python -c 'import raysim.cuda as rs; print(rs.Materials().get_index(\"air\"))'"      # prints 6

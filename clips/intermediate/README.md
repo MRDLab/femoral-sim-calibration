@@ -28,3 +28,5 @@ interpolated. ⚠️ Neither row is real time; each row prints its measured spee
 - The B-mode uses the simulator's default acoustic materials and has not been compared with clinical images.
 
 ⚠️ The saved frames were deleted on 2026-11-05 after review. These clips cannot be re-composed without re-running the simulation.
+
+**How it was made.** Runs: `i4h-phantom/run_scripts/clips_comparison_20261105.sh` and `clips_comparison_cut_20261105.sh`. Encoding: `i4h-phantom/run_scripts/clips_compose_computer_time_20261105.sh`.
