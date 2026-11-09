@@ -279,8 +279,10 @@ def title(dur):
         im.paste(mrd, (40, 28)); im.paste(umn, (W - umn.width - 40, 28 + (mrd.height - umn.height) // 2), umn)
         d = ImageDraw.Draw(im)
         y = 190
-        y += text_block(d, (W / 2, y), "Physics-Calibrated Simulation of Deformable Tissue for Ultrasound-Guided "
-                        "Robotic Femoral Access", font(40), 1080, BLACK, align="center", spacing=10) + 44
+        y += text_block(d, (W / 2, y), "Simulating Vein Compressibility for Ultrasound-Guided Femoral Access:",
+                        font(40), 1080, BLACK, align="center", spacing=10) + 10
+        y += text_block(d, (W / 2, y), "Speed, Accuracy, and Phantom Validation",
+                        font(40), 1080, BLACK, align="center", spacing=10) + 44
         d.line((W / 2 - 220, y - 22, W / 2 + 220, y - 22), fill=MAROON, width=3)
         y += text_block(d, (W / 2, y), "Amit Manicka¹, Laurent Coulon², Darwin Ang², Michael Loushin³ "
                         "and Timothy M. Kowalewski¹", font(24, False), 1220, BLACK, align="center") + 26

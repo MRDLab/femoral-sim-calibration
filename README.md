@@ -1,4 +1,4 @@
-# Physics-Calibrated Simulation of Deformable Tissue for Ultrasound-Guided Robotic Femoral Access
+# Simulating Vein Compressibility for Ultrasound-Guided Femoral Access: Speed, Accuracy, and Phantom Validation
 
 Paper, supplementary material, videos and simulation code for the ISMR 2027 submission.
 ISMR is the 2027 International Symposium on Medical Robotics; the paper was submitted through Papercept in November 2026.
